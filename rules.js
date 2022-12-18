@@ -165,6 +165,6 @@ let kingdom = getKingdom();
 let people = getPeople(kingdom)
 let clase = getClass(people)
 
-//console.log("Reino: "+kingdom.Name+"\nPueblo: "+people.Name+"\nClase social: "+clase.Name)
+console.log("Reino: "+kingdom.Name+"\nPueblo: "+people.Name+"\nClase social: "+clase.Name)
 
 
