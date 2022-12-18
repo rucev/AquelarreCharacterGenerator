@@ -1,21 +1,21 @@
-const getD4=()=> {
+const rollD4=()=> {
     return Math.floor(Math.random() * (4) + 1);
 }
 
-const getD6=()=> {
+const rollD6=()=> {
     return Math.floor(Math.random() * (6) + 1);
 }
 
-const getD8=()=> {
+const rollD8=()=> {
     return Math.floor(Math.random() * (8) + 1);
 }
 
-const getD10=()=> {
+const rollD10=()=> {
     return Math.floor(Math.random() * (10) + 1);
 }
 
-const getD100=()=> {
+const rollD100=()=> {
     return Math.floor(Math.random() * (100) + 1);
 }
 
-export {getD4, getD6, getD8, getD10, getD100};
+export {rollD4, rollD6, rollD8, rollD10, rollD100};
