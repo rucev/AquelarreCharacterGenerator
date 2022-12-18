@@ -115,7 +115,7 @@ const socialClassIslamic = [
     { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: []},
 ];
 
-const socialClass = [
+const socialPositions = [
     { Religion: "Cristiana", Classes: socialClassChristian},
     { Religion: "Judía", Classes: socialClassJewish},
     { Religion: "Islámica", Classes: socialClassIslamic},
@@ -144,26 +144,31 @@ const getPeople = (kingdom) => {
   return peopleSelected;
 };
 
-const getClass = (people) => {
+const getSocialPosition = (people) => {
     let roll = rollD10();
-    let availableClasses = {};
-    let classSelected = {};
-    socialClass.forEach((society) => {
+    let availableSocialPositions = {};
+    let socialPositionSelected = {};
+    socialPositions.forEach((society) => {
         if (society.Religion === people.Religion) {
-            availableClasses = society.Classes;
+          availableSocialPositions = society.Classes;
         }
     }) 
-    availableClasses.forEach((classStatus) => {
-        if (classStatus.Rolls.includes(roll)) {
-            classSelected = classStatus;
+    availableSocialPositions.forEach((socialPosition) => {
+        if (socialPosition.Rolls.includes(roll)) {
+          socialPositionSelected = socialPosition;
         }
     });
-    return classSelected
+    if (socialPositionSelected.Exceptions.includes(people.Name)) {
+      socialPositionSelected = getSocialPosition(people)
+    }
+    return socialPositionSelected
 }
+
+
 
 let kingdom = getKingdom();
 let people = getPeople(kingdom)
-let clase = getClass(people)
+let clase = getSocialPosition(people)
 
 console.log("Reino: "+kingdom.Name+"\nPueblo: "+people.Name+"\nClase social: "+clase.Name)
 
