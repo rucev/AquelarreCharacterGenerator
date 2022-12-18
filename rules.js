@@ -59,7 +59,7 @@ const socialClassChristian = [
     Rolls: [2],
     Name: "Baja Nobleza",
     Exceptions: ["Vasco", "Mudéjar"],
-    subclass: [
+    Subclass: [
       { Rolls: [1, 2], Name: ["Señor", "Señora"] },
       { Rolls: [3, 4, 5], Name: ["Caballero", "Dama"] },
       { Rolls: [6, 7, 8, 9, 10], Name: ["Hidalgo", "Hidalga"] },
@@ -71,10 +71,10 @@ const socialClassChristian = [
     Rolls: [7, 8, 9],
     Name: "Campesina",
     Exceptions: [],
-    subclass: [
+    Subclass: [
       { Rolls: [1, 2, 3], Name: ["Colono", "Colona"] },
       { Rolls: [4, 5, 6, 7, 8, 9], Name: ["Vasallo", "Vasalla"] },
-      { Rolls: 10, Name: ["Siervo de la Gleba", "Sierva de la Gleba"] },
+      { Rolls: [10], Name: ["Siervo de la Gleba", "Sierva de la Gleba"] },
     ],
   },
   {
@@ -94,31 +94,31 @@ const socialClassChristian = [
 ];
 
 const socialClassJewish = [
-    { Rolls: [1, 2, 3, 4], Name: "Burguesía", Exceptions: [], Subclass: [], },
-    { Rolls: [5, 6, 7, 8, 9, 10], Name: "Villano", Exceptions: [], Subclass: [], },
+  { Rolls: [1, 2, 3, 4], Name: "Burguesía", Exceptions: [], Subclass: [], },
+  { Rolls: [5, 6, 7, 8, 9, 10], Name: "Villano", Exceptions: [], Subclass: [], },
 ];
 
 const socialClassIslamic = [
-    { Rolls: [1], Name: "Alta Nobleza", Exceptions: ["Mozárabe"], Subclass: [
+  { Rolls: [1], Name: "Alta Nobleza", Exceptions: ["Mozárabe"], Subclass: [
         { Rolls: [1], Name: ["Sharif"] },
         { Rolls: [2, 3], Name: ["Shayj"] },
         { Rolls: [4, 5, 6], Name: ["Emir"] },
         { Rolls: [7, 8, 9, 10], Name: ["Qadi"] },
     ], },
-    { Rolls: [2], Name: "Sa'id", Exceptions: ["Mozárabe"], Subclass: [
+  { Rolls: [2], Name: "Baja Nobleza", Exceptions: ["Mozárabe"], Subclass: [
         { Rolls: [1, 2, 3], Name: ["Sa'id"] },
         { Rolls: [4, 5, 6, 7, 8, 9, 10], Name: ["Al-Barraz"] },
     ], },
-    { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: []},
-    { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: []},
-    { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: []},
-    { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: []},
+  { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: []},
+  { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: []},
+  { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: []},
+  { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: []},
 ];
 
 const socialPositions = [
-    { Religion: "Cristiana", Classes: socialClassChristian},
-    { Religion: "Judía", Classes: socialClassJewish},
-    { Religion: "Islámica", Classes: socialClassIslamic},
+  { Religion: "Cristiana", Classes: socialClassChristian},
+  { Religion: "Judía", Classes: socialClassJewish},
+  { Religion: "Islámica", Classes: socialClassIslamic},
 ]
 
 const getKingdom = () => {
@@ -145,31 +145,46 @@ const getPeople = (kingdom) => {
 };
 
 const getSocialPosition = (people) => {
-    let roll = rollD10();
-    let availableSocialPositions = {};
-    let socialPositionSelected = {};
-    socialPositions.forEach((society) => {
-        if (society.Religion === people.Religion) {
-          availableSocialPositions = society.Classes;
-        }
-    }) 
-    availableSocialPositions.forEach((socialPosition) => {
-        if (socialPosition.Rolls.includes(roll)) {
-          socialPositionSelected = socialPosition;
-        }
-    });
-    if (socialPositionSelected.Exceptions.includes(people.Name)) {
-      socialPositionSelected = getSocialPosition(people)
-    }
-    return socialPositionSelected
+  let roll = rollD10();
+  let availableSocialPositions = {};
+  let socialPositionSelected = {};
+  socialPositions.forEach((society) => {
+      if (society.Religion === people.Religion) {
+        availableSocialPositions = society.Classes;
+      }
+  }) 
+  availableSocialPositions.forEach((socialPosition) => {
+      if (socialPosition.Rolls.includes(roll)) {
+        socialPositionSelected = socialPosition;
+      }
+  });
+  if (socialPositionSelected.Exceptions.includes(people.Name)) {
+    socialPositionSelected = getSocialPosition(people)
+  }
+  return socialPositionSelected
 }
+
+const getSubclass = (socialPosition) => {
+  let roll = rollD10();
+  let subclassSelected = {};
+  if (socialPosition.Subclass != undefined){
+    socialPosition.Subclass.forEach((position) => {
+      if (position.Rolls.includes(roll)) {
+        subclassSelected = position;
+      }
+    });
+  }
+  return subclassSelected
+};
+
 
 
 
 let kingdom = getKingdom();
 let people = getPeople(kingdom)
 let clase = getSocialPosition(people)
+let sub = getSubclass(clase)
 
-console.log("Reino: "+kingdom.Name+"\nPueblo: "+people.Name+"\nClase social: "+clase.Name)
+console.log("Reino: "+kingdom.Name+"\nPueblo: "+people.Name+"\nClase social: "+clase.Name+"\n"+sub.Name)
 
 
