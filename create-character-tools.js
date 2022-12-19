@@ -1,6 +1,16 @@
-import { rollD10 } from "./dices&tools.js";
+import { rollD4, rollD10, rollD100 } from "./dices&tools.js";
 import { kingdoms } from "./rules-kingdom.js";
 import { socialPositions } from "./rules-position.js";
+import { professions } from "./rules-profession.js";
+
+const getGender = () => {
+  let roll = rollD4();
+  let genderSelected = 0;
+  if (roll > 2) {
+    genderSelected = 1
+  }
+  return genderSelected
+}
 
 const getKingdom = () => {
   let roll = rollD10();
@@ -58,10 +68,36 @@ const getSubclass = (socialPosition) => {
   return subclassSelected;
 };
 
+const getProfession = (religion, socialPosition) => {
+  let roll = rollD100();
+  let professionsBySociety = []
+  let availableProfessions = []
+  professions.forEach((society) => {
+    if (society.Religion === religion) {
+        professionsBySociety = society.Professions;
+    }
+  });
+  professionsBySociety.forEach((position) => {
+    if (position.Position === socialPosition) {
+        availableProfessions = position.Professions;
+    }
+  });
+  let professionSelected = {};
+  availableProfessions.forEach((profession) => {
+    if (profession.Rolls.includes(roll)) {
+      professionSelected = profession;
+    }
+  });
+  return professionSelected
+};
+
+
+let gender = getGender()
 let kingdom = getKingdom();
 let people = getPeople(kingdom);
 let clase = getSocialPosition(people);
 let sub = getSubclass(clase);
+let profession = getProfession(people.Religion, clase.Name)
 
 console.log(
   "Reino: " +
@@ -70,6 +106,6 @@ console.log(
     people.Name +
     "\nClase social: " +
     clase.Name +
-    "\n" +
-    sub.Name
+    "\nProfesión: " +
+    profession.Name
 );
