@@ -56,69 +56,32 @@
 ## Profesión:
 #### Alguacíl:
 Genero masculino
-mínimo características: AGI 15 HAB 15
-competencias primarias: Conocimiento del Área, Correr, Escuchar y 1 Competencia de Armas Soldado o Villano (a elegir)
-competencias secundarias: Descubrir, Empatía, Esquivar, Mando, Rastrear, Sigilo, Tormento, 1 Competencia de Armas Soldado o Villano (a elegir)
 Ingreso a recibir: (clase social burgués)750 maravedíes, (clase social Villano)80 maravedíes
 #### Almogávar:
 Solo personas Corona Aragón
-mínimo características: AGI 20 HAB 20
-competencias primarias: Sigilo, Escudos, Esquivar, 1 Competencia de Armas Soldado o Villano (a elegir)
-competencias secundarias: Correr, Cuchillos, Descubrir, Escuchar, Rastrear, Sanar, Tormento, 1 Competencia de Armas Arco, Ballesta u Hondas (a elegir)
 Ingreso a recibir: (SUERTEx2) maravedíes
 #### Alquimista:
-mínimo características: CUL 20
-competencias primarias: Alquimia, Astrología, Conocimiento Mágico y Leer y Escribir.
-competencias secundarias: Conocimiento Animal, Conocimiento Mineral, Conocimiento Vegetal, Empatía, Enseñar, Idioma (Griego), Idioma (Latín), Sanar.
 Ingreso a recibir: (ALQx5) maravedíes, si pertenece a Alta Nobleza (ALQx20)
 #### Ama:
 Genero femenino
-mínimo características: PER 20
-competencias primarias: Corte, Descubrir, Enseñar y Sigilo.
-competencias secundarias: Artesanía (Labor), Conocimiento Vegetal, Empatía, Escuchar, Idioma (a elegir), Memoria, Mando y Sanar.
 Ingreso a recibir: 300-400 maravedíes
 #### Artesano:
-mínimo características: HAB 20 PER 15
-competencias primarias: Artesanía (a elegir), Descubrir, Comerciar y Memoria.
-competencias secundarias: Conducir Carro, Conocimiento de Área (la ciudad en la que vive), Cuchillos, Elocuencia, Empatía, Enseñar, Escuchar y Leer y Escribir.
 Ingreso a recibir: (ART) maravedíes
 #### Bandido
-Mínimos de Características: PER 15 RES 15.
-Competencias Primarias: Descubrir, Sigilo, Tormento y 1 Competencia de Armas de Soldado o de Villano a elegir.
-Competencias Secundarias: Ballestas, Conocimiento de Área, Correr, Empatía, Escuchar, Lanzar, Rastrear y Trepar
 Ingresos Mensuales: (SUERTEx2) maravedíes 
 #### Barbero Cirujano
-Mínimos de Características: Habilidad 15, Comunicación 10 y Cultura 10.
-Competencias Primarias: Elocuencia, Empatía, Medicina y Sanar.
-Competencias Secundarias: Comerciar, Conducir Carro, Conocimiento Vegetal, Correr, Cuchillos, Descubrir, Idioma (a elegir) y Leer y Escribir.
 Ingresos Mensuales: Sanar x5, o x2 si es de posición social Villano.
 #### Brujo
-Mínimos de Características: Cultura 15.
-Competencias Primarias: Alquimia, Astrología, Conocimiento Mágico y Conocimiento Vegetal.
-Competencias Secundarias: Conocimiento Animal, Conocimiento
-Mineral, Descubrir, Empatía, Enseñar, Leyendas, Medicina y Sanar.
 Ingresos Mensuales: Tantos maravedíes como su porcentaje en Suerte.
 #### Bufón
-Mínimos de Características: Agilidad 20 y Habilidad 20.
-Competencias Primarias: Disfrazarse, Elocuencia, Escamotear y Saltar.
-Competencias Secundarias: Correr, Corte, Juego, Lanzar, Música, Ocultar, Sigilo y Trepar.
 Ingresos Mensuales: Su porcentaje en Elocuencia o Saltar —lo que sea mayor— en maravedíes. Los que pertenezcan
 a la posición social de Esclavo serán mantenidos por su señor.
 #### Caballero de Orden Militar
-Mínimos de Características: Agilidad 15 y Cultura 15.
-Competencias Primarias: Cabalgar, Teología y 2 Competencias de Armas de Soldado o de Noble (si es mujer empatia y sanar).
-Competencias Secundarias: Descubrir, Elocuencia, Empatía, Escuchar, Esquivar, Idioma (Latín), Leer y Escribir y Mando.
 Ingresos Mensuales: Los fráteres de menor entidad (Baja Nobleza) reciben unos 500 maravedíes al mes, mientras
 que aquéllos que ostentan los más altos puestos (Alta Nobleza) reciben 1.800 maravedís.
 #### Cambista
-Mínimos de Características: Cultura 15, Habilidad 10 y Percepción 10.
-Competencias Primarias: Alquimia, Comerciar, Conocimiento Mineral y Elocuencia.
-Competencias Secundarias: Artesanía, Cuchillos, Descubrir, Empatía, Idioma (a elegir), Leer y Escribir, Memoria y Ocultar.
 Ingresos Mensuales: Su porcentaje en Comerciar x10 en maravedíes.
 #### Cazador
-Mínimos de Características: Percepción 20.
-Competencias Primarias: Arcos, Escuchar, Rastrear y Sigilo.
-Competencias Secundarias: Cabalgar, Conocimiento Animal, Conocimiento de Área, Conocimiento Vegetal, Descubrir, Lanzar, Trepar y 1 Competencia de Armas de Villano.
 Ingresos Mensuales: Su porcentaje en Rastrear en maravedíes.
 #### Clérigo
 Genero masculino
@@ -130,108 +93,48 @@ Deán = barón
 Arcipreste = señor
 Canónigo = caballero
 Portero = hidalgo
-Mínimos de Características: Cultura 15 y Suerte 50.
-Competencias Primarias: Elocuencia, Idioma (Latín), Leer y Escribir y Teología.
-Competencias Secundarias: Corte, Descubrir, Empatía, Enseñar, Escuchar, Idioma (Griego), Memoria y 1 Competencia de Armas de Noble.
 Ingresos Mensuales: el canónigo y el portero 350 maravedíes, cada clase por encima gana 350+
 #### Comerciante
-Mínimos de Características: Comunicación 20.
-Competencias Primarias: Comerciar, Elocuencia, Empatía e Idioma (a elegir).
-Competencias Secundarias: Descubrir, Conducir Carro o Navegar (elegir una de las dos), Conocimiento de Área, Escuchar, Leer y Escribir, Nadar, Ocultar y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Comerciar x10 en maravedíes.
 #### Cómico
-Mínimos de Características: Comunicación 20.
-Competencias Primarias: Disfrazarse, Elocuencia, Empatía y Memoria.
-Competencias Secundarias: Conducir Carro, Enseñar, Escamotear, Escuchar, Idioma (1 Idioma), Leyendas, Teología y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: Tantos maravedíes como su porcentaje en Suerte x2.
 #### Cortesano
-Mínimos de Características: Comunicación 15 y Percepción 15.
-Competencias Primarias: Corte, Elocuencia, Empatía y Seducción.
-Competencias Secundarias: Descubrir, Cabalgar, Comerciar, Escuchar, Idioma (a elegir), Leer y Escribir, Sigilo y 1 Competencia de Armas de Noble a elegir.
 Ingresos Mensuales: Los cortesanos con un alto rango (Alta Nobleza) reciben 1.800 maravedíes al mes. El resto (la Baja Nobleza), sólo tienen 500 maravedíes.
 #### Curandero
-Mínimos de Características: Habilidad 15 y Cultura 10.
-Competencias Primarias: Alquimia, Conocimiento Mágico, Empatía y Sanar.
-Competencias Secundarias: Astrología, Descubrir, Conocimiento Animal, Conocimiento Mineral, Conocimiento Vegetal, Leyendas, Medicina y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Sanar en maravedíes. Los curanderos que pertenezcan a la posición social de Esclavo serán mantenidos por su amo.
 #### Derviche
 Genero masculino
-Mínimos de Características: Agilidad 15 y Cultura 20.
-Competencias Primarias: Elocuencia, Empatía, Leer y Escribir y Teología.
-Competencias Secundarias: Conocimiento Mágico, Descubrir, Escuchar, Esquivar, Enseñar, Leyendas, Memoria y Sanar.
 Ingresos Mensuales: Los derviches no tienen posesiones ni equipo propio, por lo que no reciben ingresos mensuales. En cambio, y tengan la posición social que tengan, sus gastos son mínimos: tan sólo 10 maravedíes a la semana.
 #### Embaucador
-Mínimos de Características:Agilidad 10 y Comunicación 15.
-Competencias Primarias: Comerciar, Conducir Carro, Elocuencia Empatía.
-Competencias Secundarias: Alquimia, Conocimiento Vegetal, Correr, Disfrazarse, Escamotear, Esquivar, Idioma (a elegir) y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Elocuencia en maravedíes.
 #### Escriba
-Mínimos de Características: Cultura 15 y Percepción 15.
-Competencias Primarias: Comerciar, Idioma (Latín, Hebreo o Árabe, según su cultura), Leer y Escribir y Memoria.
-Competencias Secundarias: Descubrir, Elocuencia, Empatía, Enseñar, Escuchar, Idioma (a elegir), Sigilo y 1 Competencia
-de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Leer y Escribir x10 en maravedíes. Los escribas que sean esclavos no recibirán nada, ya que deben ser mantenidos por su señor.
 #### Ghazi
-Mínimos de Características: Agilidad 15, Habilidad 15 y Suerte 40.
-Competencias Primarias: Arcos, Cabalgar, Teología y 1 Competencia de Armas a elegir de cualquier tipo.
-Competencias Secundarias: Descubrir, Empatía, Escudos, Esquivar, Leer y Escribir, Mando, Sanar y Tormento.
 Ingresos Mensuales: Los ghazi de mayor rango (de posición social Noble o Mercader) reciben al mes 500 maravedíes,
 mientras que los de menor rango (de posición social Ciudadano Campesino) sólo reciben 80 maravedíes mensuales.
 #### Goliardo
 Esta profesión puede ser ejercida por personajes de sexo femenino, pero deberán hacerlo disfrazadas.
-Mínimos de Características: Cultura 15, Habilidad 10 y
-Agilidad 10.
-Competencias Primarias: Cantar, Escamotear, Leer y Escribir y Seducción.
-Competencias Secundarias: Correr, Elocuencia, Esquivar, Idioma (Latín), Juego, Pelea, Teología y 1 Competencia de Armas de Villano.
 Ingresos Mensuales: Su porcentaje en Leer y Escribir en maravedíes, cantidad que acostumbran a gastar rápidamente.
 #### Infanzón
-Mínimos de Características: Fuerza 15 y Agilidad 15.
-Competencias Primarias: Cabalgar, Mando y 2 Competencias de Armas de Noble o Soldado a elegir.
-Competencias Secundarias: Ballestas, Descubrir, Escuchar, Escudos, Esquivar, Juego, Leer y Escribir y Tormento.
 Ingresos Mensuales: Los grandes infanzones (Alta Nobleza) reciben 1.800 maravedíes mensuales, mientras que los de menor rango (Baja Nobleza) ganan tan sólo 500 maravedíes.
 #### Juglar
-Mínimos de Características: Comunicación 20, Agilidad 15 y Cultura 10.
-Competencias Primarias: Cantar, Elocuencia, Escamotear y Música.
-Competencias Secundarias: Correr, Esquivar, Leer y Escribir, Leyendas, Pelea, Saltar, Sigilo y 1 Competencia de Armas de Villano.
 Ingresos Mensuales: Su porcentaje de Cantar, Elocuencia o Música (lo que sea mayor) en maravedíes. Los juglares
 que pertenezcan a la posición social de Esclavo deberán ser mantenidos por su señor.
 #### Ladrón
-Mínimos de Características:Agilidad 15 y Habilidad 20.
-Competencias Primarias: Correr, Escamotear, Esquivar y Trepar.
-Competencias Secundarias: Comerciar, Descubrir, Disfrazarse, Escuchar, Forzar Mecanismos, Lanzar, Sigilo y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Suerte x2 en maravedíes.
 #### Mago
 Genero masculino
-Mínimos de Características: Cultura 20 y Percepción 15.
-Competencias Primarias: Conocimiento Mágico, Elocuencia, Leer y Escribir y Teología.
-Competencias Secundarias: Alquimia, Astrología, Conocimiento Animal, Conocimiento Mineral, Conocimiento Vegetal, Enseñar, Medicina y Memoria.
 Ingresos Mensuales: Su porcentaje en Conocimiento Mágico x5 en maravedíes, aunque si ocupa un alto cargo (pertenece
 a la Alta Nobleza), puede multiplicar su porcentaje x20.
 #### Malsín
-Mínimos de Características: Agilidad 15 y Percepción 20.
-Competencias Primarias: Conocimiento de Área, Escuchar, Forzar Mecanismos y Sigilo.
-Competencias Secundarias: Comerciar, Correr, Descubrir, Empatía, Memoria, Saltar, Trepar y 1 Competencia de Armas de Villano.
 Ingresos Mensuales: Su porcentaje en Suerte x2 en maravedíes.
 #### Marino
-Mínimos de Características: Habilidad 15 y Agilidad 15.
-Competencias Primarias: Descubrir, Nadar, Navegar y Trepar.
-Competencias Secundarias: Astrología, Idiomas (2 idiomas a elegir), Juego, Memoria, Sanar, Seducción y 1 Competencia de Armas de Villano o Soldado.
 Ingresos Mensuales: Su porcentaje en Navegar x5 en maravedíes
 #### Médico
-Mínimos de Características: Cultura 15 y Habilidad 15.
-Competencias Primarias: Conocimiento Vegetal, Empatía, Medicina y Sanar.
-Competencias Secundarias:Alquimia, Conocimiento Animal, Conocimiento Mineral, Descubrir, Elocuencia, Leer y Escribir, Memoria y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Medicina x10 en maravedíes.
 #### Mediero
-Mínimos de Características: Comunicación 15 y Cultura 15.
-Competencias Primarias: Comerciar, Conocimiento de Área, Elocuencia y Empatía.
-Competencias Secundarias: Disfrazarse, Escamotear, Esquivar, Leer y Escribir, Mando, Sigilo, Tormento y 1 Competencia
-de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Comerciar x10 en maravedíes.
 #### Mendigo
-Mínimos de Características: Ninguno
-Competencias Primarias: Elocuencia, Empatía, Escamotear y Memoria.
-Competencias Secundarias: Artesanía, Comerciar, Idioma (a elegir), Juego, Ocultar, Pelea, Sigilo y 1 Competencia de Armas de Villano a elegir.
 Ingresos Mensuales: La mitad de su porcentaje en Elocuencia en maravedíes.
 #### Monje
 Abad = Alta Nobleza.
@@ -239,91 +142,47 @@ Prior = Baja Nobleza.
 Hermanos = Burgués.
 Monje = Villano.
 Novicio = Campesino
-Mínimos de Características: Cultura 15 y Suerte 45.
-Competencias Primarias: Enseñar, Idioma (Latín), Leer y Escribir y Teología.
-Competencias Secundarias: Cantar, Descubrir, Elocuencia, Empatía, Escuchar, Idioma (Griego), Idioma (Árabe) y Memoria.
 Ingresos Mensuales: El abad recibe 1.800 maravedíes al mes, el prior y los hermanos, 500; los monjes, 80 y los novicios
 solamente 40 maravedíes.
 #### Muccadim
 Genero Masculino
-Mínimos de Características: Fuerza 15 y Cultura 10.
-Competencias Primarias: Empatía, Pelea, Teología y 1 Competencia de Armas de Villano o Soldado a elegir (pero
-nunca armas con filo).
-Competencias Secundarias: Correr, Descubrir, Escuchar, Esquivar, Mando, Sanar, Saltar y Tormento.
 Ingresos Mensuales: Reciben 80 maravedíes al mes.
 #### Pardo
 Esta profesión sólo puede ser ejercida por personajes que pertenezcan al reino de Castilla y al de Granada.
-Mínimos de Características: Agilidad 20 y Habilidad 15.
-Competencias Primarias: Cabalgar, Descubrir, Mando y 1 Competencia de Armas de Villano o Soldado a elegir.
-Competencias Secundarias: Comerciar, Conocimiento de Área, Escuchar, Idioma (a elegir), Rastrear, Sanar, Sigilo y Tormento.
 Ingresos Mensuales: Su porcentaje en Suerte x10 en maravedíes.
 #### Pastor
-Mínimos de Características: Agilidad 15 y Percepción 20.
-Competencias Primarias: Conocimiento Animal, Descubrir, Escuchar y Rastrear.
-Competencias Secundarias: Artesanía, Astrología, Correr, Hondas, Lanzar, Palos, Saltar y Trepar.
 Ingresos Mensuales: La mitad de su porcentaje en Conocimiento Animal en maravedíes. Los pastores esclavos
 deben ser mantenidos por su señor.
 #### Pirata
-Mínimos de Características: Habilidad 15 y Agilidad 15.
-Competencias Primarias: Descubrir, Nadar, Navegar y 1 Competencia de Armas de Villano o Soldado a elegir.
-Competencias Secundarias: Astrología, Ballestas, Idioma (a elegir), Juego, Lanzar, Sanar, Seducción y Trepar.
 Ingresos Mensuales: Su porcentaje en Suerte x5 en maravedíes, aunque los piratas con barco propio (clase social burguesa) ganan Suerte x15
 #### Qaina
 Genero femenino
-Mínimos de Características: Agilidad 15, Comunicación 15 y Aspecto 17.
-Competencias Primarias: Cantar, Elocuencia, Música y Seducción.
-Competencias Secundarias: Corte, Empatía, Idioma (a elegir), Leyendas, Memoria, Ocultar, Saltar y Sigilo.
 Ingresos Mensuales: Su porcentaje en Cantar, Música o Seducción x2 (lo que sea mayor) en maravedíes. Las qainas esclavas
 deben ser mantenidas por su señor.
 #### Rabino
 Genero masculino
-Mínimos de Características: Suerte 50 y Cultura 20.
-Competencias Primarias: Elocuencia, Idioma (Hebreo), Leer y Escribir y Teología.
-Competencias Secundarias: Astrología, Empatía, Enseñar, Escuchar, Idioma (Árabe), Idioma (Latín),
-Memoria y Sigilo.
 Ingresos Mensuales: Aunque no recibe sueldo alguno como rabino, obtiene con su otra profesión su porcentaje en
 Teología x10 en maravedíes para mantenerse él y a su mujer.
 #### Ramera
 Genero femenino
-Mínimos de Características: Aspecto 17.
-Competencias Primarias: Elocuencia, Escamotear, Seducción y Sigilo.
-Competencias Secundarias: Comerciar, Correr, Descubrir, Empatía, Forzar Mecanismos, Juego, Ocultar y 1 Competencia
-de Armas de Villano a elegir.
 Ingresos Mensuales: Su porcentaje en Seducción en maravedíes.
 #### Sacerdote
 Genero masculino
 Párroco = Burgués.
 Vicario = Villano.
 Capellán = Campesino
-Mínimos de Características: Cultura 15 y Suerte 50.
-Competencias Primarias: Elocuencia, Leer y Escribir, Idioma (Latín) y Teología.
-Competencias Secundarias: Cantar, Conocimiento de Área, Descubrir, Empatía, Enseñar, Escuchar, Mando y Memoria.
 Ingresos Mensuales: Los párrocos ganan 750 maravedíes mensuales, mientras que los vicarios y capellanes sólo obtienen
 80 cada mes.
 #### Siervo de Corte
-Mínimos de Características: Agilidad 15 y Habilidad 15.
-Competencias Primarias: Artesanía, Conducir Carro, Conocimiento Vegetal y Sigilo.
-Competencias Secundarias: Corte, Correr, Comerciar, Degustar, Escuchar, Juego, Saltar y 1 Competencia de Armas
-de Villano a elegir.
 Ingresos Mensuales: Recibe 40 maravedíes cada mes, aunque los de posición social esclavo no reciben nada, ya que
 son mantenidos por su señor.
 #### Soldado
-Mínimos de Características: Fuerza 15 y Habilidad 15.
-Competencias Primarias: Ballestas, Cabalgar, Escudos y 1 Competencia de Armas de Villano o Soldado a elegir.
-Competencias Secundarias: Descubrir, Conducir Carro, Cuchillos, Esquivar, Pelea, Sanar, Sigilo y Tormento.
 Ingresos Mensuales: Si posee un rango inferior (clase social Villano o Campesino) recibe su porcentaje en la Competencia
 de Armas que tenga más alta en maravedíes; si tiene un rango superior (clase social Burgués) recibe el porcentaje x5 en maravedíes. Los soldados esclavos deben ser mantenidos por su señor.
 #### Trovador
-Mínimos de Características: Comunicación 15 y Cultura 15.
-Competencias Primarias: Elocuencia, Leer y Escribir, Música y Seducción.
-Competencias Secundarias: Cabalgar, Cantar, Corte, Empatía, Leyendas, Memoria, Sigilo y 1 Competencia de
-Armas de Noble a elegir.
 Ingresos Mensuales: Los trovadores de la Baja Nobleza reciben 500 maravedíes mensuales, pero los de la Alta Nobleza tienen a su disposición 1.800 cada mes.
 #### Ulema
 Esta profesión sólo puede ser ejercida por personajes de sexo masculino.
-Mínimos de Características: Cultura 20 y Suerte 50.
-Competencias Primarias: Idioma (Árabe), Leer y Escribir, Memoria y Teología.
-Competencias Secundarias: Corte, Descubrir, Elocuencia, Empatía, Enseñar, Escuchar, Idioma (a elegir) y 1 Competencia de Armas de Noble a elegir.
 Ingresos Mensuales: Un ulema recibe al mes un sueldo equivalente a 1.800 maravedíes.
 
 
