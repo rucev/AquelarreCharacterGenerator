@@ -47,6 +47,7 @@ const professionChristianVillein = [
   { Rolls: rollRange(36, 40), Name: "Goliardo" },
   { Rolls: rollRange(41, 45), Name: "Juglar" },
   { Rolls: rollRange(46, 50), Name: "Ladrón" },
+  { Rolls: rollRange(51, 60), Name: "Marino" },
   { Rolls: rollRange(61, 65), Name: "Mendigo" },
   { Rolls: rollRange(66, 70), Name: "Monje" },
   { Rolls: rollRange(71, 75), Name: "Pardo" },
