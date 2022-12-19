@@ -1,4 +1,4 @@
-import { rollD10, rollRange } from "./dices&tools.js";
+import { rollRange } from "./dices&tools.js";
 
 const peopleCastilla = [
   { Rolls: [1, 2, 3], Name: "Castellano", Religion: "Cristiana" },
@@ -109,82 +109,20 @@ const socialClassIslamic = [
         { Rolls: [1, 2, 3], Name: ["Sa'id"] },
         { Rolls: [4, 5, 6, 7, 8, 9, 10], Name: ["Al-Barraz"] },
     ], },
-  { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: []},
-  { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: []},
-  { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: []},
-  { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: []},
+  { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: [] },
+  { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: [] },
+  { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: [] },
+  { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: [] },
 ];
 
 const socialPositions = [
-  { Religion: "Cristiana", Classes: socialClassChristian},
-  { Religion: "Judía", Classes: socialClassJewish},
-  { Religion: "Islámica", Classes: socialClassIslamic},
-]
-
-const getKingdom = () => {
-  let roll = rollD10();
-  let kingdomSelected = {};
-  kingdoms.forEach((kingdom) => {
-    if (kingdom.Rolls.includes(roll)) {
-      kingdomSelected = kingdom;
-    }
-  });
-  return kingdomSelected;
-};
-
-const getPeople = (kingdom) => {
-  const availablePeople = kingdom.People;
-  let roll = rollD10();
-  let peopleSelected = {};
-  availablePeople.forEach((people) => {
-    if (people.Rolls.includes(roll)) {
-      peopleSelected = people;
-    }
-  });
-  return peopleSelected;
-};
-
-const getSocialPosition = (people) => {
-  let roll = rollD10();
-  let availableSocialPositions = {};
-  let socialPositionSelected = {};
-  socialPositions.forEach((society) => {
-      if (society.Religion === people.Religion) {
-        availableSocialPositions = society.Classes;
-      }
-  }) 
-  availableSocialPositions.forEach((socialPosition) => {
-      if (socialPosition.Rolls.includes(roll)) {
-        socialPositionSelected = socialPosition;
-      }
-  });
-  if (socialPositionSelected.Exceptions.includes(people.Name)) {
-    socialPositionSelected = getSocialPosition(people)
-  }
-  return socialPositionSelected
-}
-
-const getSubclass = (socialPosition) => {
-  let roll = rollD10();
-  let subclassSelected = {};
-  if (socialPosition.Subclass != undefined){
-    socialPosition.Subclass.forEach((position) => {
-      if (position.Rolls.includes(roll)) {
-        subclassSelected = position;
-      }
-    });
-  }
-  return subclassSelected
-};
+  { Religion: "Cristiana", Classes: socialClassChristian },
+  { Religion: "Judía", Classes: socialClassJewish },
+  { Religion: "Islámica", Classes: socialClassIslamic },
+];
 
 
+export {kingdoms, socialPositions};
 
-
-let kingdom = getKingdom();
-let people = getPeople(kingdom)
-let clase = getSocialPosition(people)
-let sub = getSubclass(clase)
-
-console.log("Reino: "+kingdom.Name+"\nPueblo: "+people.Name+"\nClase social: "+clase.Name+"\n"+sub.Name)
 
 
