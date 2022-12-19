@@ -1,5 +1,6 @@
 import { rollD10 } from "./dices&tools.js";
-import { kingdoms, socialPositions } from "./rules.js";
+import { kingdoms } from "./rules-kingdom.js";
+import { socialPositions } from "./rules-position.js";
 
 const getKingdom = () => {
   let roll = rollD10();
