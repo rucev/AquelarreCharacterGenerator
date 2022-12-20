@@ -2,12 +2,19 @@ import { rollD4, rollD10, rollD100 } from "./dices&tools.js";
 import { kingdoms } from "./rules-kingdom.js";
 import { socialPositions } from "./rules-position.js";
 import { professions } from "./rules-profession.js";
+import {
+  professionCharacteristics,
+  professionPrimarySkills,
+  professionSecondarySkills,
+  professionsExclusivityriteria,
+  professionsSubcategory,
+} from "./details-professions.js";
 
 const getGender = () => {
   let roll = rollD4();
-  let genderSelected = 0;
+  let genderSelected = 0; //Masculino
   if (roll > 2) {
-    genderSelected = 1
+    genderSelected = 1 //Femenino
   }
   return genderSelected
 }
