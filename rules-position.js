@@ -21,7 +21,7 @@ const socialClassChristian = [
       { Rolls: [6, 7, 8, 9, 10], Name: ["Hidalgo", "Hidalga"] },
     ],
   },
-  { Rolls: [3, 4], Name: "Burguesia", Exceptions: ["Vasco"], Subclass: [] },
+  { Rolls: [3, 4], Name: "Burguesía", Exceptions: ["Vasco"], Subclass: [] },
   { Rolls: [5, 6], Name: "Villana", Exceptions: [], Subclass: [] },
   {
     Rolls: [7, 8, 9],
@@ -78,7 +78,7 @@ const socialClassIslamic = [
   { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: [] },
   { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: [] },
   { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: [] },
-  { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: [] },
+  { Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: [{Rolls: [9, 10], Name: ["Eunuco"]}] },
 ];
 
 const socialPositions = [

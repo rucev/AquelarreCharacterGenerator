@@ -89,7 +89,7 @@ const professionChristianSlave = [
 const professionChristian = [
   { Position: "Alta Nobleza", Professions: professionChristianHighNobility },
   { Position: "Baja Nobleza", Professions: professionChristianLowNobility },
-  { Position: "Burguesia", Professions: professionChristianBourgeoisie },
+  { Position: "Burguesía", Professions: professionChristianBourgeoisie },
   { Position: "Villana", Professions: professionChristianVillein },
   { Position: "Campesina", Professions: professionChristianPeasant },
   { Position: "Esclava", Professions: professionChristianSlave },
@@ -126,7 +126,7 @@ const professionJewishVillein = [
 ];
 
 const professionJewish = [
-  { Position: "Burguesia", Professions: professionJewishBourgeoisie },
+  { Position: "Burguesía", Professions: professionJewishBourgeoisie },
   { Position: "Villana", Professions: professionJewishVillein },
 ];
 
