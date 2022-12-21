@@ -21,8 +21,8 @@ const socialClassChristian = [
       { Rolls: [6, 7, 8, 9, 10], Name: ["Hidalgo", "Hidalga"] },
     ],
   },
-  { Rolls: [3, 4], Name: "Burguesía", Exceptions: ["Vasco"], Subclass: null },
-  { Rolls: [5, 6], Name: "Villana", Exceptions: [], Subclass: null },
+  { Rolls: [3, 4], Name: "Burguesía", Exceptions: ["Vasco"], Subclass: undefined },
+  { Rolls: [5, 6], Name: "Villana", Exceptions: [], Subclass: undefined },
   {
     Rolls: [7, 8, 9],
     Name: "Campesina",
@@ -45,13 +45,13 @@ const socialClassChristian = [
       "Portugues",
       "Vasco",
     ],
-    Subclass: null,
+    Subclass: undefined,
   },
 ];
 
 const socialClassJewish = [
-  { Rolls: [1, 2, 3, 4], Name: "Burguesía", Exceptions: [], Subclass: null },
-  { Rolls: [5, 6, 7, 8, 9, 10], Name: "Villana", Exceptions: [], Subclass: null },
+  { Rolls: [1, 2, 3, 4], Name: "Burguesía", Exceptions: [], Subclass: undefined },
+  { Rolls: [5, 6, 7, 8, 9, 10], Name: "Villana", Exceptions: [], Subclass: undefined },
 ];
 
 const socialClassIslamic = [
@@ -75,10 +75,10 @@ const socialClassIslamic = [
       { Rolls: [4, 5, 6, 7, 8, 9, 10], Name: ["Al-Barraz", "Al-Barraz"] },
     ],
   },
-  { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: null },
-  { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: null },
-  { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: null },
-{ Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: null /*{Rolls: [9, 10], Name: ["Eunuco"]}*/  },
+  { Rolls: [3, 4], Name: "Mercader", Exceptions: [], Subclass: undefined },
+  { Rolls: [5, 6], Name: "Ciudadana", Exceptions: [], Subclass: undefined },
+  { Rolls: [7, 8, 9], Name: "Campesina", Exceptions: [], Subclass: undefined },
+{ Rolls: [9, 10], Name: "Esclava", Exceptions: [], Subclass: undefined /*{Rolls: [9, 10], Name: ["Eunuco"]}*/  },
 ];
 
 const socialPositions = [

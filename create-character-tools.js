@@ -62,16 +62,21 @@ const getSocialPosition = (people) => {
   return socialPositionSelected;
 };
 
-const getSubclass = (socialPosition) => {
+const getSubclassPositionName = (socialPosition, gender) => {
   let roll = rollD10();
   let subclassSelected = {};
-  socialPosition.Subclass.forEach((position) => {
-    if (position.Rolls.includes(roll)) {
-      subclassSelected = position;
-    }
-  });
-  return subclassSelected.Name;
-};
+  let subclassName = "" 
+  if (socialPosition.Subclass != undefined) {
+    socialPosition.Subclass.forEach((position) => {
+      if (position.Rolls.includes(roll)) {
+        subclassSelected = position;
+        subclassName = " " + subclassSelected.Name[gender]
+      }
+    });
+ 
+  }
+  return subclassName
+}
 
 const getProfession = (religion, socialPosition) => {
   let roll = rollD100();
@@ -116,44 +121,8 @@ const checkProfession = (professionName, gender, kingdom) => {
 }};
 
 
-
-let gender = getGender()
-let kingdom = getKingdom();
-let people = getPeople(kingdom);
-let clase = getSocialPosition(people);
-let sub = getSubclass(clase);
-let profession = getProfession(people.Religion, clase.Name)
-
-/*
-console.log(
-  gender +
-  "Reino: " +
-    kingdom.Name +
-    "\nPueblo: " +
-    people.Name +
-    "\nClase social: " +
-    clase.Name +
-    "\nProfesión: " +
-    profession.Name
-);*/
-
 //console.log(checkProfession("Ramera", 0, "Reino de Castilla"))
 
-let socialPosition =   {
-  Rolls: [7, 8, 9],
-  Name: "Campesina",
-  Exceptions: [],
-  Subclass: [
-    { Rolls: [1, 2, 3], Name: ["Colono", "Colona"] },
-    { Rolls: [4, 5, 6, 7, 8, 9], Name: ["Vasallo", "Vasalla"] },
-    { Rolls: [10], Name: ["Siervo de la Gleba", "Sierva de la Gleba"] },
-  ],
-}
-
-
-console.log(getSubclass(socialPosition)[0])
-
-
-export { getGender, getKingdom, getPeople, getSocialPosition, getSubclass, getProfession };
+export { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession };
 
 

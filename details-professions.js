@@ -843,7 +843,7 @@ const professionSecondarySkills = [
   },
 ];
 
-const professionsExclusivityriteria = [
+const professionsExclusivityCriteria = [
   { Name: "Alguacíl", Gender: [0], Kingdom: [] },
   { Name: "Almogávar", Gender: [], Kingdom: ["Corona de Aragón"] },
   { Name: "Ama", Gender: [1], Kingdom: [] },
@@ -898,6 +898,6 @@ export {
   professionCharacteristics,
   professionPrimarySkills,
   professionSecondarySkills,
-  professionsExclusivityriteria,
+  professionsExclusivityCriteria,
   professionsSubcategory,
 };
