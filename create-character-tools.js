@@ -11,7 +11,7 @@ import {
 } from "./details-professions.js";
 
 const getGender = () => {
-  let roll = rollD4();
+  const roll = rollD4();
   let genderSelected = 0; //Masculino
   if (roll > 2) {
     genderSelected = 1 //Femenino
@@ -20,7 +20,7 @@ const getGender = () => {
 }
 
 const getKingdom = () => {
-  let roll = rollD10();
+  const roll = rollD10();
   let kingdomSelected = {};
   kingdoms.forEach((kingdom) => {
     if (kingdom.Rolls.includes(roll)) {
@@ -32,7 +32,7 @@ const getKingdom = () => {
 
 const getPeople = (kingdom) => {
   const availablePeople = kingdom.People;
-  let roll = rollD10();
+  const roll = rollD10();
   let peopleSelected = {};
   availablePeople.forEach((people) => {
     if (people.Rolls.includes(roll)) {
@@ -43,7 +43,7 @@ const getPeople = (kingdom) => {
 };
 
 const getSocialPosition = (people) => {
-  let roll = rollD10();
+  const roll = rollD10();
   let availableSocialPositions = {};
   let socialPositionSelected = {};
   socialPositions.forEach((society) => {
@@ -63,7 +63,7 @@ const getSocialPosition = (people) => {
 };
 
 const getSubclassPositionName = (socialPosition, gender) => {
-  let roll = rollD10();
+  const roll = rollD10();
   let subclassSelected = {};
   let subclassName = "" 
   if (socialPosition.Subclass != undefined) {
@@ -78,8 +78,8 @@ const getSubclassPositionName = (socialPosition, gender) => {
   return subclassName
 }
 
-const getProfession = (religion, socialPosition) => {
-  let roll = rollD100();
+const getProfession = (religion, socialPosition, gender, kingdom) => {
+  const roll = rollD100();
   let professionsBySociety = []
   let availableProfessions = []
   professions.forEach((society) => {
@@ -98,31 +98,103 @@ const getProfession = (religion, socialPosition) => {
       professionSelected = profession;
     }
   });
+  if (checkProfession(professionSelected.Name, gender, kingdom) === false){
+    professionSelected = getProfession(religion, socialPosition, gender, kingdom)
+  }
   return professionSelected
 };
 
-const checkProfession = (professionName, gender, kingdom) => {
-  let checkProfession = Boolean;
+const checkProfessionByExclusivity = (professionName) => {
+  let check = Boolean;
   const professionsNames = professionsExclusivityCriteria.map(
     ({ Name }) => Name
   );
   if (professionsNames.includes(professionName)) {
-    if (
-      professionsExclusivityCriteria[professionsNames.indexOf(professionName)]
-      .Gender === gender) {
-      checkProfession = true
-    } else if (professionsExclusivityCriteria[professionsNames.indexOf(professionName)]
-    .Kingdom === kingdom) {
-      checkProfession = true
+      check = false; //Needs more validations
   } else {
-    checkProfession = true;
+    check = true; //Profession is already valid
   }
-  return checkProfession;
-}};
+  return check;
+};
+
+const checkProfessionByGender = (professionName, gender) => {
+  let check = Boolean;
+  const professionsWithGenderCriteria = professionsExclusivityCriteria.filter(profession => { return profession.Gender === gender})
+  const professionsGenderNames = professionsWithGenderCriteria.map(profession => profession.Name);
+  if (professionsGenderNames.includes(professionName)) {
+    check = true; //Profession is already valid
+} else {
+  check= false; //Needs more validations
+}
+return check;
+}
+
+const checkProfessionByKingdom = (professionName, kingdom) => {
+  let check = Boolean;
+  const professionsWithKingdomCriteria = professionsExclusivityCriteria.filter(profession => { return profession.Kingdom.includes(kingdom) })
+  const professionsKingdomNames = professionsWithKingdomCriteria.map(profession => profession.Name);
+  if (professionsKingdomNames.includes(professionName)) {
+    check = true; //Profession is already valid
+} else {
+  check = false; //Needs more validations
+}
+return check;
+}
+
+const checkProfession = (profession, gender, kingdom) => {
+  let check = Boolean;
+  if (checkProfessionByExclusivity(profession) === true) {
+    check = true
+  } else {
+    if (checkProfessionByGender(profession, gender) === true) {
+      check = true
+    } else {
+      if (checkProfessionByKingdom(profession, kingdom) === true) {
+        check = true
+      }
+      else {
+        check = false
+      }
+    } 
+  }
+  return check
+}
+
+const setCharacteristicsByProfession = (professionName, characteristics) => {
+  const professionCharact = professionCharacteristics.filter(profession => { return profession.Name == professionName })[0]
+  let newCharacteristics = {}
+  for (let [key, value] of Object.entries(characteristics)) {
+    if (key in professionCharact) {
+      value = value + professionCharact[key]
+    }
+    newCharacteristics[key] = value
+  }
+  return newCharacteristics
+}
+
+const characteristics = {
+  STR: 0,
+  AGI: 0,
+  DEX: 0,
+  VIT: 0,
+  PER: 0,
+  COM: 0,
+  CUL: 0,
+  APP: 0,
+  RR: 0,
+  IR: 0,
+  LUCK: 0,
+  WILL: 0,
+  AGE: 0,
+  HEIGHT: 0,
+  WEIGHT: 0
+}
+const profession = { Name: "Alguacíl", AGI: 15, DEX: 15 }
 
 
-//console.log(checkProfession("Ramera", 0, "Reino de Castilla"))
+setCharacteristicsByProfession("Alguacíl", characteristics)
 
-export { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession };
+
+export { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession };
 
 

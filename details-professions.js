@@ -844,21 +844,21 @@ const professionSecondarySkills = [
 ];
 
 const professionsExclusivityCriteria = [
-  { Name: "Alguacíl", Gender: [0], Kingdom: [] },
-  { Name: "Almogávar", Gender: [], Kingdom: ["Corona de Aragón"] },
-  { Name: "Ama", Gender: [1], Kingdom: [] },
-  { Name: "Clérigo", Gender: [0], Kingdom: [] },
-  { Name: "Derviche", Gender: [0], Kingdom: [] },
-  { Name: "Goliardo", Gender: [0], Kingdom: [] },
-  { Name: "Mago", Gender: [0], Kingdom: [] },
-  { Name: "Muccadim", Gender: [0], Kingdom: [] },
-  { Name: "Pardo", Gender: [], Kingdom: ["Corona de Castilla", "Reino de Granada"] },
-  { Name: "Muccadim", Gender: [0], Kingdom: [] },
-  { Name: "Qaina", Gender: [1], Kingdom: [] },
-  { Name: "Rabino", Gender: [0], Kingdom: [] },
-  { Name: "Ramera", Gender: [1], Kingdom: [] },
-  { Name: "Sacerdote", Gender: [0], Kingdom: [] },
-  { Name: "Ulema", Gender: [0], Kingdom: [] },
+  { Name: "Alguacíl", Gender: 0, Kingdom: [] },
+  { Name: "Almogávar", Gender: undefined, Kingdom: ["Corona de Aragón"] },
+  { Name: "Ama", Gender: 1, Kingdom: [] },
+  { Name: "Clérigo", Gender: 0, Kingdom: [] },
+  { Name: "Derviche", Gender: 0, Kingdom: [] },
+  { Name: "Goliardo", Gender: 0, Kingdom: [] },
+  { Name: "Mago", Gender: 0, Kingdom: [] },
+  { Name: "Muccadim", Gender: 0, Kingdom: [] },
+  { Name: "Pardo", Gender: undefined, Kingdom: ["Corona de Castilla", "Reino de Granada"] },
+  { Name: "Muccadim", Gender: 0, Kingdom: [] },
+  { Name: "Qaina", Gender: 1, Kingdom: [] },
+  { Name: "Rabino", Gender: 0, Kingdom: [] },
+  { Name: "Ramera", Gender: 1, Kingdom: [] },
+  { Name: "Sacerdote", Gender: 0, Kingdom: [] },
+  { Name: "Ulema", Gender: 0, Kingdom: [] },
 ];
 
 const professionsSubcategory = [
