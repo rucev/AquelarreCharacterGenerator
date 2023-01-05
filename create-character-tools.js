@@ -1,14 +1,15 @@
-import { rollD4, rollD10, rollD100 } from "./dices&tools.js";
+import { rollD4, rollD10, rollD100, sumValues, rollD6, rollD8 } from "./dices&tools.js";
 import { kingdoms } from "./rules-kingdom.js";
 import { socialPositions } from "./rules-position.js";
 import { professions } from "./rules-profession.js";
 import {
   professionCharacteristics,
-  professionPrimarySkills,
-  professionSecondarySkills,
+  professionSkills,
   professionsExclusivityCriteria,
   professionsSubcategory,
 } from "./details-professions.js";
+import { characteristics } from "./rules-skills.js";
+//import { characteristics } from "./rules-skills.js";
 
 const getGender = () => {
   const roll = rollD4();
@@ -167,34 +168,65 @@ const setCharacteristicsByProfession = (professionName, characteristics) => {
     if (key in professionCharact) {
       value = value + professionCharact[key]
     }
+    if (value > 20) {
+      newCharacteristics[key] = 20
+    } else {
+      newCharacteristics[key] = value
+    }
+  }
+  return newCharacteristics
+}
+
+const getRandomCharacteristic = (characteristics) => {
+  const keys = Object.keys(characteristics);
+  const index = Math.floor(keys.length * Math.random());
+  const characteristic = keys[index];
+  return characteristic;
+};
+
+const setNewCharacteristic = (characteristics) => {
+  let newCharacteristics = {};
+  const characteristic = getRandomCharacteristic(characteristics)
+  for (let [key, value] of Object.entries(characteristics)) {
+    if (key === characteristic){
+      if (value < 20){
+        value = value + 1
+      } 
+    }
     newCharacteristics[key] = value
   }
   return newCharacteristics
 }
 
-const characteristics = {
-  STR: 0,
-  AGI: 0,
-  DEX: 0,
-  VIT: 0,
-  PER: 0,
-  COM: 0,
-  CUL: 0,
-  APP: 0,
-  RR: 0,
-  IR: 0,
-  LUCK: 0,
-  WILL: 0,
-  AGE: 0,
-  HEIGHT: 0,
-  WEIGHT: 0
+const setMainCharacteristics = (characteristics) => {
+  let newCharacteristics = characteristics;
+  let availableCharacteristicsPoints = 100 - sumValues(characteristics)
+  do {
+    newCharacteristics = setNewCharacteristic(newCharacteristics)
+    availableCharacteristicsPoints -= 1
+  } while (availableCharacteristicsPoints > 0)
+  return newCharacteristics
 }
-const profession = { Name: "Alguacíl", AGI: 15, DEX: 15 }
 
 
-setCharacteristicsByProfession("Alguacíl", characteristics)
+let chars = { STR: 5, AGI: 5, DEX: 5, VIT: 10, PER: 10, COM: 5, CUL: 5 }
+
+console.log(setMainCharacteristics(chars))
 
 
-export { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession };
+
+
+
+
+
+
+
+
+
+
+
+export { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics };
+
+
 
 

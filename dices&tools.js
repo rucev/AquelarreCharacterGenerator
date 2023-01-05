@@ -20,5 +20,7 @@ const rollD100=()=> {
 
 const rollRange=(start, end)=> { return new Array(end+1 - start).fill().map((d, i) => i + start) };
 
+const sumValues = obj => Object.values(obj).reduce((a, b) => a + b, 0)
 
-export { rollD4, rollD6, rollD8, rollD10, rollD100, rollRange };
+
+export { rollD4, rollD6, rollD8, rollD10, rollD100, rollRange, sumValues };

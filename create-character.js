@@ -1,5 +1,5 @@
 import { emptyCharacter } from "./empty-character.js";
-import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession } from "./create-character-tools.js"
+import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics } from "./create-character-tools.js"
 
 const createCharacter = () => {
     let character = emptyCharacter
@@ -16,7 +16,7 @@ const createCharacter = () => {
     const parentProfession = getProfession(people.Religion, socialPosition.Name, 0, kingdom.Name)
     character.Profession = profession.Name
     character.ParentProfession = parentProfession.Name
-    character.MainCharacteristics = setCharacteristicsByProfession(profession.Name, character.MainCharacteristics)
+    character.MainCharacteristics = setMainCharacteristics(setCharacteristicsByProfession(profession.Name, character.MainCharacteristics))
     character.OtherCharacteristics = setCharacteristicsByProfession(profession.Name, character.OtherCharacteristics)
     return character
 }
