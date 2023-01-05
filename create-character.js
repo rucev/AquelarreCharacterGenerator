@@ -16,7 +16,8 @@ const createCharacter = () => {
     const parentProfession = getProfession(people.Religion, socialPosition.Name, 0, kingdom.Name)
     character.Profession = profession.Name
     character.ParentProfession = parentProfession.Name
-    character.Characteristics = setCharacteristicsByProfession(profession.Name, character.Characteristics)
+    character.MainCharacteristics = setCharacteristicsByProfession(profession.Name, character.MainCharacteristics)
+    character.OtherCharacteristics = setCharacteristicsByProfession(profession.Name, character.OtherCharacteristics)
     return character
 }
 

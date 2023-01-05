@@ -7,7 +7,7 @@ let emptyCharacter = {
   Family: "",
   Profession: "",
   ParentProfession: "",
-  Characteristics: {
+  MainCharacteristics: {
     STR: 0,
     AGI: 0,
     DEX: 0,
@@ -15,6 +15,16 @@ let emptyCharacter = {
     PER: 0,
     COM: 0,
     CUL: 0,
+    APP: 0,
+    RR: 0,
+    IR: 0,
+    LUCK: 0,
+    WILL: 0,
+    AGE: 0,
+    HEIGHT: 0,
+    WEIGHT: 0,
+  },
+  OtherCharacteristics: {
     APP: 0,
     RR: 0,
     IR: 0,
