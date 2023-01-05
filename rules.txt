@@ -1,5 +1,26 @@
 # Normas de creación de personajes:
 
+Aprendizaje
+
+a Cada punto que se asigne a las competencias primarias y
+secundarias de la profesión del personaje —marcadas de la
+manera apropiada en la Hoja de Personaje—, aumentará su
+porcentaje en un +1%.
+a Para aumentar en +1% el resto de competencias —o sea, las que
+no pertenecen a la profesión del personaje—, se debe gastar el
+doble de puntos, o sea, 2 puntos por cada +1% de subida.
+a Ninguna competencia puede aumentarse por encima del
+valor de la característica en que se base multiplicada por
+cinco (x5), excepto si es una competencia que dependa de
+Cultura, que puede llegar sin problemas hasta el 100%.
+Aprendizaje Familiar
+Además de lo que hayamos podido aprender por nuestra cuenta, que son esos 100 puntos que acabamos de repartir, nuestros padres o tutores también trataron de inculcarnos
+de jóvenes una profesión u oficio. Es por eso que una vez terminada la distribución de esos 100 puntos, recibiremos otros 25
+puntos adicionales que representarán esa educación y que podemos repartir también como queramos, pero sólo entre las cuatro Competencias Primarias de la profesión paterna.
+
+
+
+
 ### Carácteristicas por pueblo
 -> Árabe: sociedad: Islámica, Restricciones: ninguna, Idiomas Andalusí al 100%, Árabe a (CULx4)% y Castellano a (CULx4)%
 -> Aragonés: sociedad: Cristiana, Restricciones: no pueden pertenecer a la clase social Esclavo, Idiomas: Aragonés 100% y Castellano (CULx4)%
@@ -15,55 +36,13 @@
 -> Vasco:  sociedad Cristiana, Restricciones: solo puede pertenecer a las clases villano y campesino, Idiomas: Euskera 100%, Castellano: (CULx4)%
 
 ## Posición Social
-### Cristiano:
-1 ---> Alta nobleza:
-    1 ---> Duque/Duquesa
-    2 ---> Marqués/Marquesa
-    3-4 -> Conde/Condesa
-    5-7 -> Vizconde/Vizcondesa
-    8-10 > Barón/Baronesa
-2 ---> Baja nobleza:
-    (si no es barón ni el primogenito y padres vivos --> Hidalgo)
-    1-2 -> Señor/Señora
-    3-5 -> Caballero/Dama
-    6-10 -> Hidalgo
-3-4 -> Burguesía
-5-6 -> Villano
-7-9 -> Campesinos:
-    1-3 -> Colono
-    4-9 -> Vasallo
-    10  -> Siervos de la Gleba
-10 --> Esclavos
-### Judío:
-1-4 -> Burguesía
-5-10 > Villano
-### Islámico:
-1 ---> Alta Nobleza:
-    (si no es barón ni el primogenito y padres vivos --> sa'id)
-    1 ---> Sharif (Jerife)
-    2-3 -> Shayj (Jeque)
-    4-6 -> Emir
-    7-10 > Qadi (Cadí)
-2 ---> Baja Nobleza:
-    1-3 -> Sa'id(Señor)
-    4-10 > Al-Barraz
-3-4 -> Mercaderes
-5-6 -> Ciudadanos
-7-9 -> Campesinos
-10 --> Esclavos
-    (si masculino y 9-10: eunuco)
 
 ## Profesión:
-#### Alguacíl:
-Genero masculino
-Ingreso a recibir: (clase social burgués)750 maravedíes, (clase social Villano)80 maravedíes
 #### Almogávar:
-Solo personas Corona Aragón
 Ingreso a recibir: (SUERTEx2) maravedíes
 #### Alquimista:
 Ingreso a recibir: (ALQx5) maravedíes, si pertenece a Alta Nobleza (ALQx20)
 #### Ama:
-Genero femenino
 Ingreso a recibir: 300-400 maravedíes
 #### Artesano:
 Ingreso a recibir: (ART) maravedíes
@@ -84,15 +63,6 @@ Ingresos Mensuales: Su porcentaje en Comerciar x10 en maravedíes.
 #### Cazador
 Ingresos Mensuales: Su porcentaje en Rastrear en maravedíes.
 #### Clérigo
-Genero masculino
-Cardenal = duque
-Arzobispo = marqués
-Obispo = conde
-Arcediano = vizconde
-Deán = barón
-Arcipreste = señor
-Canónigo = caballero
-Portero = hidalgo
 Ingresos Mensuales: el canónigo y el portero 350 maravedíes, cada clase por encima gana 350+
 #### Comerciante
 Ingresos Mensuales: Su porcentaje en Comerciar x10 en maravedíes.
@@ -103,7 +73,6 @@ Ingresos Mensuales: Los cortesanos con un alto rango (Alta Nobleza) reciben 1.80
 #### Curandero
 Ingresos Mensuales: Su porcentaje en Sanar en maravedíes. Los curanderos que pertenezcan a la posición social de Esclavo serán mantenidos por su amo.
 #### Derviche
-Genero masculino
 Ingresos Mensuales: Los derviches no tienen posesiones ni equipo propio, por lo que no reciben ingresos mensuales. En cambio, y tengan la posición social que tengan, sus gastos son mínimos: tan sólo 10 maravedíes a la semana.
 #### Embaucador
 Ingresos Mensuales: Su porcentaje en Elocuencia en maravedíes.
@@ -113,7 +82,6 @@ Ingresos Mensuales: Su porcentaje en Leer y Escribir x10 en maravedíes. Los esc
 Ingresos Mensuales: Los ghazi de mayor rango (de posición social Noble o Mercader) reciben al mes 500 maravedíes,
 mientras que los de menor rango (de posición social Ciudadano Campesino) sólo reciben 80 maravedíes mensuales.
 #### Goliardo
-Esta profesión puede ser ejercida por personajes de sexo femenino, pero deberán hacerlo disfrazadas.
 Ingresos Mensuales: Su porcentaje en Leer y Escribir en maravedíes, cantidad que acostumbran a gastar rápidamente.
 #### Infanzón
 Ingresos Mensuales: Los grandes infanzones (Alta Nobleza) reciben 1.800 maravedíes mensuales, mientras que los de menor rango (Baja Nobleza) ganan tan sólo 500 maravedíes.
@@ -123,7 +91,6 @@ que pertenezcan a la posición social de Esclavo deberán ser mantenidos por su 
 #### Ladrón
 Ingresos Mensuales: Su porcentaje en Suerte x2 en maravedíes.
 #### Mago
-Genero masculino
 Ingresos Mensuales: Su porcentaje en Conocimiento Mágico x5 en maravedíes, aunque si ocupa un alto cargo (pertenece
 a la Alta Nobleza), puede multiplicar su porcentaje x20.
 #### Malsín
@@ -137,18 +104,11 @@ Ingresos Mensuales: Su porcentaje en Comerciar x10 en maravedíes.
 #### Mendigo
 Ingresos Mensuales: La mitad de su porcentaje en Elocuencia en maravedíes.
 #### Monje
-Abad = Alta Nobleza.
-Prior = Baja Nobleza.
-Hermanos = Burgués.
-Monje = Villano.
-Novicio = Campesino
 Ingresos Mensuales: El abad recibe 1.800 maravedíes al mes, el prior y los hermanos, 500; los monjes, 80 y los novicios
 solamente 40 maravedíes.
 #### Muccadim
-Genero Masculino
 Ingresos Mensuales: Reciben 80 maravedíes al mes.
 #### Pardo
-Esta profesión sólo puede ser ejercida por personajes que pertenezcan al reino de Castilla y al de Granada.
 Ingresos Mensuales: Su porcentaje en Suerte x10 en maravedíes.
 #### Pastor
 Ingresos Mensuales: La mitad de su porcentaje en Conocimiento Animal en maravedíes. Los pastores esclavos
@@ -156,21 +116,14 @@ deben ser mantenidos por su señor.
 #### Pirata
 Ingresos Mensuales: Su porcentaje en Suerte x5 en maravedíes, aunque los piratas con barco propio (clase social burguesa) ganan Suerte x15
 #### Qaina
-Genero femenino
 Ingresos Mensuales: Su porcentaje en Cantar, Música o Seducción x2 (lo que sea mayor) en maravedíes. Las qainas esclavas
 deben ser mantenidas por su señor.
 #### Rabino
-Genero masculino
 Ingresos Mensuales: Aunque no recibe sueldo alguno como rabino, obtiene con su otra profesión su porcentaje en
 Teología x10 en maravedíes para mantenerse él y a su mujer.
 #### Ramera
-Genero femenino
 Ingresos Mensuales: Su porcentaje en Seducción en maravedíes.
 #### Sacerdote
-Genero masculino
-Párroco = Burgués.
-Vicario = Villano.
-Capellán = Campesino
 Ingresos Mensuales: Los párrocos ganan 750 maravedíes mensuales, mientras que los vicarios y capellanes sólo obtienen
 80 cada mes.
 #### Siervo de Corte
@@ -182,7 +135,6 @@ de Armas que tenga más alta en maravedíes; si tiene un rango superior (clase s
 #### Trovador
 Ingresos Mensuales: Los trovadores de la Baja Nobleza reciben 500 maravedíes mensuales, pero los de la Alta Nobleza tienen a su disposición 1.800 cada mes.
 #### Ulema
-Esta profesión sólo puede ser ejercida por personajes de sexo masculino.
 Ingresos Mensuales: Un ulema recibe al mes un sueldo equivalente a 1.800 maravedíes.
 
 

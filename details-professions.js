@@ -45,15 +45,24 @@ const professionCharacteristics = [
   { Name: "Ulema", CUL: 20, LUCK: 50 },
 ];
 
-const professionPrimarySkills = [
+const professionSkills = [   // Primary = Base x 3
   {
     Name: "Alguacíl",
-    Skills: [
-      "Conocimiento del Área",
-      "Correr",
-      "Escuchar",
-      "Competencia Arma Soldado/Villano",
-    ],
+    Skills: {
+      AreaKnowledge: 3,
+      Run: 3,
+      Listen: 3,
+      Weapon1: 3, //Soldado/Villano
+      Discovery: 1,
+      Empathy: 1,
+      Dodge: 1,
+      Command: 1,
+      Track: 1,
+      Stealth: 1,
+      Torture: 1,
+      Weapon2: 1, //Soldado/Villano,
+    }
+
   },
   {
     Name: "Almogávar",
@@ -269,19 +278,6 @@ const professionPrimarySkills = [
 ];
 
 const professionSecondarySkills = [
-  {
-    Name: "Alguacíl",
-    Skills: [
-      "Descubrir",
-      "Empatía",
-      "Esquivar",
-      "Mando",
-      "Rastrear",
-      "Sigilo",
-      "Tormento",
-      "Competencia Arma Soldado/Villano",
-    ],
-  },
   {
     Name: "Almogávar",
     Skills: [
@@ -896,7 +892,7 @@ const professionsSubcategory = [
 
 export {
   professionCharacteristics,
-  professionPrimarySkills,
+  professionSkills,
   professionSecondarySkills,
   professionsExclusivityCriteria,
   professionsSubcategory,
