@@ -76,20 +76,25 @@ const skillsPER = [
 
 const skillsCOM = [
   { ID: "Command", Name: "Mando" },
-  { ID: "Commerce", Name: "Command" },
+  { ID: "Commerce", Name: "Comerciar" },
   { ID: "CourtEtiquette", Name: "Corte" },
+  { ID: "Disguise", Name: "Disfrazarse"},
   { ID: "Eloquence", Name: "Elocuencia" },
   { ID: "Singing", Name: "Canto" },
   { ID: "Teach", Name: "Enseñar" },
   { ID: "Torture", Name: "Tormento" },
 ];
 
+const skillsVIT = [
+  { ID: "Shields", Name: "Escudos"}
+]
+
 const skillsCUL = [
   { ID: "Alchemy", Name: "Alquimia" },
   { ID: "AnimalKnowledge", Name: "Conocimiento Animal" },
   { ID: "AreaKnowledge", Name: "Conocimiento de Área" },
   { ID: "Astrology", Name: "Astrología" },
-  { ID: "Language", Name: "Idioma" },
+  //{ ID: "Language", Name: "Idioma" },
   { ID: "Legends", Name: "Leyendas" },
   { ID: "MagicalKnowledge", Name: "Conocimiento Mágico" },
   { ID: "Medicine", Name: "Medicina" },
@@ -102,6 +107,14 @@ const skillsCUL = [
 
 const skillsAPP = [{ ID: "Seduction", Name: "Seducción" }];
 
-const skillByCharacteristic = {STR: skillsSTR, AGI: skillsAGI, DEX: skillsDEX, PER: skillsPER, COM: skillsCOM, CUL: skillsCUL, APP: skillsAPP }
+const skillByCharacteristic = {STR: skillsSTR, AGI: skillsAGI, DEX: skillsDEX, PER: skillsPER, COM: skillsCOM, VIT: skillsVIT, CUL: skillsCUL, APP: skillsAPP }
 
-export { rulesHeight, rulesWeight, skillByCharacteristic };
+const nobilityWeapons = ["Crossbows", "Knives", "Shields", "Swords", "Longwords", "Spears", "Brawl"];
+
+const villeinWeapons = ["Bows", "Knives", "Axes", "Slings", "Maces", "Spears", "Clubs"];
+
+const soldierWeapons = ["Bows", "Crossbows", "Knives", "Swords", "Longwords", "Shields", "Axes", "Spears", "Maces", "Brawl"]
+
+const weapons= {Nobility: nobilityWeapons, Villein: villeinWeapons, Soldier: soldierWeapons}
+
+export { rulesHeight, rulesWeight, skillByCharacteristic, weapons };
