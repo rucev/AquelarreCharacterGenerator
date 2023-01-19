@@ -45,8 +45,12 @@ const professionCharacteristics = [
   { Name: "Ulema", CUL: 20, LUCK: 50 },
 ];
 
+
+//TODO: Check if all skills are correct
+
+//TODO: Think how to incorporate weapons and languages
+
 const professionSkills = [
-  // Primary = Base x 3
   {
     Name: "Alguacíl",
     PrimaryWeapon: [
@@ -86,8 +90,8 @@ const professionSkills = [
       "PlantKnowledge",
       "Empathy",
       "Teach",
-      "Language" /*(Griego)*/,
-      "Language" /*(Latín)*/,
+      //"Language" /*(Griego)*/,
+      //"Language" /*(Latín)*/,
       "Heal",
     ],
   },
@@ -101,7 +105,7 @@ const professionSkills = [
       "PlantKnowledge",
       "Empathy",
       "Listen",
-      "Language",
+      //"Language",
       "Memory",
       "Command",
       "Heal",
@@ -150,7 +154,7 @@ const professionSkills = [
       "PlantKnowledge",
       "Run",
       "Discovery",
-      "Language",
+      //"Language",
       "ReadWrite",
     ],
   },
@@ -205,10 +209,10 @@ const professionSkills = [
       "Empathy",
       "Listen",
       "Dodge",
-      "Language" /*(Latín)*/,
+      //"Language" /*(Latín)*/,
       "ReadWrite",
       "Command",
-    ],
+    ]
   },
   {
     Name: "Cambista",
@@ -219,7 +223,7 @@ const professionSkills = [
       "Craft",
       "Discovery",
       "Empathy",
-      "Language",
+      //"Language",
       "ReadWrite",
       "Memory",
       "SleightHand",
@@ -248,14 +252,14 @@ const professionSkills = [
     SecondaryWeapon: [
       /*Noble*/
     ],
-    PrimarySkills: ["Eloquence", "Language" /*Latín*/, "ReadWrite", "Theology"],
+    PrimarySkills: ["Eloquence", /*"Language" Latín*/, "ReadWrite", "Theology"],
     SecondarySkills: [
       "CourtEtiquette",
       "Discovery",
       "Empathy",
       "Teach",
       "Listen",
-      "Language" /*(Griego)*/,
+      //"Language" /*(Griego)*/,
       "Memory",
     ],
   },
@@ -265,7 +269,7 @@ const professionSkills = [
     SecondaryWeapon: [
       /*Villano*/
     ],
-    PrimarySkills: ["Commerce", "Eloquence", "Empathy", "Language"],
+    PrimarySkills: ["Commerce", "Eloquence", "Empathy", /*"Language"*/],
     SecondarySkills: [
       "Discovery",
       "Drive",
@@ -288,7 +292,7 @@ const professionSkills = [
       "Teach",
       "Conceal",
       "Listen",
-      "Language",
+      //"Language",
       "Legends",
       "Theology",
     ],
@@ -305,7 +309,7 @@ const professionSkills = [
       "Ride",
       "Commerce",
       "Listen",
-      "Language",
+      //"Language",
       "ReadWrite",
       "Stealth",
     ],
@@ -359,7 +363,7 @@ const professionSkills = [
       "Disguise",
       "Conceal",
       "Dodge",
-      "Language",
+      //"Language",
     ],
   },
   {
@@ -368,7 +372,7 @@ const professionSkills = [
     SecondaryWeapon: [],
     PrimarySkills: [
       "Commerce",
-      "Language" /*("Latín", "Hebreo", "Árabe"*/,
+      //"Language" /*("Latín", "Hebreo", "Árabe"*/,
       "ReadWrite",
       "Memory",
     ],
@@ -378,7 +382,7 @@ const professionSkills = [
       "Empathy",
       "Teach",
       "Listen",
-      "Language",
+      //"Language",
       "Stealth",
     ],
   },
@@ -406,7 +410,7 @@ const professionSkills = [
       "Run",
       "Eloquence",
       "Dodge",
-      "Language",
+      //"Language",
       "SleightHand",
       "Theology",
     ],
@@ -538,7 +542,7 @@ const professionSkills = [
     SecondarySkills: [
       "Craft",
       "Commerce",
-      "Language",
+      //"Language",
       "SleightHand",
       "Stealth",
     ], 
@@ -547,15 +551,15 @@ const professionSkills = [
     Name: "Monje",
     PrimaryWeapon: [],
     SecondaryWeapon: [],
-    PrimarySkills: ["Teach", "Language" /*Latín*/, "ReadWrite", "Theology"],
+    PrimarySkills: ["Teach", /*"Language" /*Latín*/, "ReadWrite", "Theology"],
     SecondarySkills: [
       "Singing",
       "Discovery",
       "Eloquence",
       "Empathy",
       "Listen",
-      "Language", //(Griego)"
-      "Language", //(Árabe)"
+      //"Language", //(Griego)"
+      //"Language", //(Árabe)"
       "Memory",
     ], 
   },
@@ -586,7 +590,7 @@ const professionSkills = [
       "Commerce",
       "AreaKnowledge",
       "Listen",
-      "Language",
+      //"Language",
       "Track",
       "Heal",
       "Stealth",
@@ -616,7 +620,7 @@ const professionSkills = [
     "ShipHandling",],
     SecondarySkills: [
       "Astrology",
-      "Language",
+      //"Language",
       "SleightHand",
       "Throw",
       "Heal",
@@ -631,7 +635,7 @@ const professionSkills = [
     SecondarySkills: [
       "CourtEtiquette",
       "Empathy",
-      "Language",
+      //"Language",
       "Legends",
       "Memory",
       "SleightHand",
@@ -643,7 +647,7 @@ const professionSkills = [
     Name: "Rabino",
     PrimaryWeapon: [],
     SecondaryWeapon: [],
-    PrimarySkills: ["Eloquence", "Language" /*(Hebreo)*/, "ReadWrite", "Theology"],
+    PrimarySkills: ["Eloquence", /*"Language" (Hebreo)*/, "ReadWrite", "Theology"],
     SecondarySkills: [
       "Astrology",
       "Empathy",
@@ -674,7 +678,7 @@ const professionSkills = [
     Name: "Sacerdote",
     PrimaryWeapon: [],
     SecondaryWeapon: [],
-    PrimarySkills: ["Eloquence", "ReadWrite", "Language" /*(Latín)*/, "Theology"],
+    PrimarySkills: ["Eloquence", "ReadWrite", /*"Language"(Latín)*/, "Theology"],
     SecondarySkills: [
       "Singing",
       "AreaKnowledge",
@@ -736,7 +740,7 @@ const professionSkills = [
     Name: "Ulema",
     PrimaryWeapon: [],
     SecondaryWeapon: [/*Competencia Arma Noble*/],
-    PrimarySkills: ["Language" /*(Árabe)*/, "ReadWrite", "Memory", "Theology"],
+    PrimarySkills: [/*"Language"(Árabe)*/, "ReadWrite", "Memory", "Theology"],
     SecondarySkills: [
       "CourtEtiquette",
       "Discovery",
@@ -744,7 +748,7 @@ const professionSkills = [
       "Empathy",
       "Teach",
       "Listen",
-      "Language",
+      //"Language",
     ],
   },
 ];
@@ -804,10 +808,12 @@ const professionsSubcategory = [
   },
 ];
 
+
+//TODO: Add salaries
+
 export {
   professionCharacteristics,
   professionSkills,
-  professionSecondarySkills,
   professionsExclusivityCriteria,
   professionsSubcategory,
 };

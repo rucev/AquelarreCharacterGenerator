@@ -164,7 +164,7 @@ const setOtherCharacteristics = (otherCharacteristics, mainCharacteristics, gend
   return newCharacteristics
 }
 
-
+// TODO: Add AdvantagesDisadvantages
 
 
 export {

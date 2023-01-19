@@ -1,6 +1,8 @@
 import { emptyCharacter } from "./empty-character.js";
 import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics } from "./tools/create-character-tools.js"
 
+//TODO: Add Skills
+
 const createCharacter = () => {
     let character = emptyCharacter
     const gender = getGender()

@@ -1,5 +1,5 @@
 import {skillByCharacteristic} from "../../rules/rules-characteristics.js"
-
+import { professionSkills } from "../../rules/details-professions.js"
 
 const testChar = {
     Name: '',
@@ -27,6 +27,10 @@ const testChar = {
 }
 
 
+
+//TODO: Add Lenguages
+// TODO: Add Weapons
+
 const setCharacteristicsBySkills = (mainCharacteristics, APP) => {
     let characterSkills = []
     for (let [char, skills] of Object.entries(skillByCharacteristic)) {
@@ -42,6 +46,38 @@ const setCharacteristicsBySkills = (mainCharacteristics, APP) => {
     return characterSkills
 }
 
+const getProfessionSkills = (professionName, skillsRank) => {  
+    let selectedProfessionSkills = []
+    professionSkills.forEach((profession) => {
+        if (profession.Name === professionName){
+            selectedProfessionSkills = profession[skillsRank]
+            console.log(profession[skillsRank])
+        } 
+    return selectedProfessionSkills
+    });
+};
 
-console.log(setCharacteristicsBySkills(testChar.MainCharacteristics, testChar.OtherCharacteristics.APP))
+// TODO: Check why an undefined appears while checkSkillType
 
+const checkSkillType = (skill, characterProfession, parentProfession) => { // 3 = Primary, 2 = Secondary, 1 = Paternal, 0 = Normal
+    const primarySkills = getProfessionSkills(characterProfession, "PrimarySkills");
+    console.log(primarySkills)
+    const secondarySkills = getProfessionSkills(characterProfession, "SecondarySkills");
+    const paternSkills = getProfessionSkills(parentProfession, "PrimarySkills");
+    let skillType = Number
+    if (primarySkills.includes(skill)) {
+        skillType = 3
+    } else if (secondarySkills.includes(skill)) {
+        skillType = 2
+    } else if (paternSkills.includes(skill)) {
+        skillType = 1
+    } else {
+        skillType = 0
+    }
+    return skillType
+}
+
+
+console.log(checkSkillType("Seduction", testChar.Profession, testChar.ParentProfession))
+
+console.log(getProfessionSkills(testChar.Profession))

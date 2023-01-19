@@ -1,5 +1,7 @@
 import { professionsExclusivityCriteria } from "../../rules/details-professions.js";
 
+// TODO: Add Salary Functions
+
 const checkProfessionByExclusivity = (professionName) => {
   let check = Boolean;
   const professionsNames = professionsExclusivityCriteria.map(

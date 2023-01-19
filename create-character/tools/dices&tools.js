@@ -27,4 +27,7 @@ const rollRange=(start, end)=> { return new Array(end+1 - start).fill().map((d, 
 const sumValues = obj => Object.values(obj).reduce((a, b) => a + b, 0)
 
 
+//TODO: Eliminate useless functions
+
+
 export { rollD4, rollD6, rollD8, rollD10, rollD50, rollD100, rollRange, sumValues };
