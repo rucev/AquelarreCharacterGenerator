@@ -30,7 +30,7 @@ const rulesWeight = [
   { Rules: [16, 17, 18, 19, 20], Weight: 150 },
 ];
 
-const skillsSTR = [
+const skillsSTR = [ 
   { ID: "Axes", Name: "Hachas" },
   { ID: "Longwords", Name: "Espadones" },
   { ID: "Maces", Name: "Mazas" },

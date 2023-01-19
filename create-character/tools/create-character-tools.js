@@ -26,7 +26,7 @@ import {
   getAge,
   getHeight,
   getWeight
-} from "./specific-tools/get-characteristics-tools.js";
+} from "./specific-tools/set-characteristics-tools.js";
 
 const getGender = () => {
   const roll = rollD4();
@@ -164,19 +164,7 @@ const setOtherCharacteristics = (otherCharacteristics, mainCharacteristics, gend
   return newCharacteristics
 }
 
-const setSkills = (mainCharacteristics, otherCharacteristics, skills) => {
-  let newSkills = {};
-  // Iterar skills si KEY = 
-  /*
-  const characteristic = getRandomCharacteristic(characteristics);
-  for (let [key, value] of Object.entries(characteristics)) {
-    if (key === characteristic && value < 20) {
-      value = value + 1;
-    }
-    newCharacteristics[key] = value;
-  }*/
-  return newCharacteristics;
-};
+
 
 
 export {
