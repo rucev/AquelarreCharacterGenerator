@@ -1,4 +1,4 @@
-import { rollRange } from "./dices&tools.js";
+import { rollRange } from "../tools/dices&tools.js";
 
 const professionChristianHighNobility = [
   { Rolls: rollRange(1, 10), Name: "Alquimista" },

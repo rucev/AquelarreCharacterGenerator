@@ -1,5 +1,5 @@
 import { emptyCharacter } from "./empty-character.js";
-import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics } from "./create-character-tools.js"
+import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics } from "./tools/create-character-tools.js"
 
 const createCharacter = () => {
     let character = emptyCharacter

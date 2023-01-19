@@ -104,5 +104,4 @@ const skillsAPP = [{ ID: "Seduction", Name: "Seducción" }];
 
 const skillByCharacteristic = {STR: skillsSTR, AGI: skillsAGI, DEX: skillsDEX, PER: skillsPER, COM: skillsCOM, CUL: skillsCUL, APP: skillsAPP }
 
-console.log(skillByCharacteristic.STR)
 export { rulesHeight, rulesWeight, skillByCharacteristic };
