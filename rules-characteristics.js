@@ -1,4 +1,5 @@
-const rulesHeight = [ //Varas
+const rulesHeight = [
+  //Varas
   { Rules: [5], Height: 1.52 },
   { Rules: [6], Height: 1.54 },
   { Rules: [7], Height: 1.57 },
@@ -13,7 +14,8 @@ const rulesHeight = [ //Varas
   { Rules: [16, 17, 18, 19, 20], Height: 1.79 },
 ];
 
-const rulesWeight = [ //Libras
+const rulesWeight = [
+  //Libras
   { Rules: [5], Weight: 106 },
   { Rules: [6], Weight: 110 },
   { Rules: [7], Weight: 118 },
@@ -28,73 +30,79 @@ const rulesWeight = [ //Libras
   { Rules: [16, 17, 18, 19, 20], Weight: 150 },
 ];
 
-/*
-const skillsByCharacterCharacteristics = {
-    STR: [Axes, Longwords, Maces],
-    STR: [
-      { Climb: NaN },
-      { Dodge: NaN },
-      { Jump: NaN },
-      { Ride: NaN },
-      { Run: NaN },
-      { ShipHandling: NaN },
-      { Stealth: NaN },
-      { Swim: NaN },
-      { Throw: NaN },
-      { Brawl: NaN },
-      { Clubs: NaN },
-      { Spears: NaN },
-    ],
-    DEX: [
-      { Conceal: NaN },
-      { Craft: NaN },
-      { Drive: NaN },
-      { Heal: NaN },
-      { PickLock: NaN },
-      { SleightHand: NaN },
-      { Knives: NaN },
-      { Swords: NaN },
-    ],
-    PER: [
-      { Discovery: NaN },
-      { Empathy: NaN },
-      { Listen: NaN },
-      { Memory: NaN },
-      { Taste: NaN },
-      { Track: [] },
-      { Bows: NaN },
-      { Crossbows: NaN },
-      { Slings: NaN },
-    ],
-    COM: [
-      { Command: NaN },
-      { Commerce: NaN },
-      { CourtEtiquette: NaN },
-      { Eloquence: NaN },
-      { Singing: NaN },
-      { Teach: NaN },
-      { Torture: NaN },
-      { Crossbows: NaN },
-      { Slings: NaN },
-    ],
-    CUL: [
-      { Alchemy: NaN },
-      { AnimalKnowledge: NaN },
-      { AreaKnowledge: NaN },
-      { Astrology: NaN },
-      { Games: NaN },
-      { Language: [] },
-      { Legends: NaN },
-      { MagicalKnowledge: NaN },
-      { Medicine: NaN },
-      { MineralKnowledge: NaN },
-      { Music: NaN },
-      { PlantKnowledge: NaN },
-      { ReadWrite: NaN },
-      { Theology: NaN },
-    ],
-    APP: [{ Seduction: NaN }],
-  };
-*/
+const skillsSTR = [
+  { ID: "Axes", Name: "Hachas" },
+  { ID: "Longwords", Name: "Espadones" },
+  { ID: "Maces", Name: "Mazas" },
+];
 
-export { rulesHeight, rulesWeight  };
+const skillsAGI = [
+  { ID: "Climb", Name: "Trepar" },
+  { ID: "Dodge", Name: "Esquivar" },
+  { ID: "Jump", Name: "Saltar" },
+  { ID: "Ride", Name: "Cabalgar" },
+  { ID: "Run", Name: "Correr" },
+  { ID: "Throw", Name: "Lanzar" },
+  { ID: "Swim", Name: "Nadar" },
+  { ID: "Stealth", Name: "Sigilo" },
+  { ID: "Spears", Name: "Lanzas" },
+  { ID: "Brawl", Name: "Pelea" },
+  { ID: "Clubs", Name: "Palos" },
+];
+
+const skillsDEX = [
+  { ID: "Conceal", Name: "Escamotear" },
+  { ID: "ShipHandling", Name: "Navegar" },
+  { ID: "Craft", Name: "Artesanía" },
+  { ID: "Drive", Name: "Conducir Carro" },
+  { ID: "Heal", Name: "Sanar" },
+  { ID: "PickLock", Name: "Forzar Mecanismos" },
+  { ID: "SleightHand", Name: "Juego" },
+  { ID: "Knives", Name: "Cuchillos" },
+  { ID: "Swords", Name: "Espadas" },
+];
+
+const skillsPER = [
+  { ID: "Discovery", Name: "Descubrir" },
+  { ID: "Empathy", Name: "Empatía" },
+  { ID: "Listen", Name: "Escuchar" },
+  { ID: "Memory", Name: "Memoria" },
+  { ID: "Taste", Name: "Degustar" },
+  { ID: "Track", Name: "Rastrear" },
+  { ID: "Bows", Name: "Arcos" },
+  { ID: "Crossbows", Name: "Ballestas" },
+  { ID: "Slings", Name: "Hondas" },
+];
+
+const skillsCOM = [
+  { ID: "Command", Name: "Mando" },
+  { ID: "Commerce", Name: "Command" },
+  { ID: "CourtEtiquette", Name: "Corte" },
+  { ID: "Eloquence", Name: "Elocuencia" },
+  { ID: "Singing", Name: "Canto" },
+  { ID: "Teach", Name: "Enseñar" },
+  { ID: "Torture", Name: "Tormento" },
+];
+
+const skillsCUL = [
+  { ID: "Alchemy", Name: "Alquimia" },
+  { ID: "AnimalKnowledge", Name: "Conocimiento Animal" },
+  { ID: "AreaKnowledge", Name: "Conocimiento de Área" },
+  { ID: "Astrology", Name: "Astrología" },
+  { ID: "Language", Name: "Idioma" },
+  { ID: "Legends", Name: "Leyendas" },
+  { ID: "MagicalKnowledge", Name: "Conocimiento Mágico" },
+  { ID: "Medicine", Name: "Medicina" },
+  { ID: "MineralKnowledge", Name: "Conocimiento Mineral" },
+  { ID: "Music", Name: "Música" },
+  { ID: "PlantKnowledge", Name: "Conocimiento Vegetal" },
+  { ID: "ReadWrite", Name: "Leer y Escribir" },
+  { ID: "Theology", Name: "Teología" },
+];
+
+const skillsAPP = [{ ID: "Seduction", Name: "Seducción" }];
+
+const skillByCharacteristic = {STR: skillsSTR, AGI: skillsAGI, DEX: skillsDEX, PER: skillsPER, COM: skillsCOM, CUL: skillsCUL, APP: skillsAPP }
+
+console.log(skillByCharacteristic.STR)
+export { rulesHeight, rulesWeight, skillByCharacteristic };

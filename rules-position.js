@@ -2,7 +2,7 @@ const socialClassChristian = [
   {
     Rolls: [1],
     Name: "Alta Nobleza",
-    Exceptions: ["Vasco", "Mudéjar"],
+    Exceptions: ["Vasco", "Mudéjar"], //people
     Subclass: [
       { Rolls: [1], Name: ["Duque", "Duquesa"] },
       { Rolls: [2], Name: ["Marqués", "Marquesa"] },

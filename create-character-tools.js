@@ -16,20 +16,16 @@ import {
   professionsExclusivityCriteria,
   professionsSubcategory,
 } from "./details-professions.js";
-import { rulesHeight, rulesWeight } from "./rules-characteristics.js";
+import { rulesHeight, rulesWeight, skillByCharacteristic } from "./rules-characteristics.js";
 
 const getGender = () => {
   const roll = rollD4();
-  let genderSelected = 0; //Mal
-  if (roll > 2) {
-    genderSelected = 1; //Fem
-  }
-  return genderSelected;
+  return roll > 2 ? 1 : 0; // 1 = FEM ; 0 = MAL
 };
 
 const getKingdom = () => {
   const roll = rollD10();
-  let kingdomSelected = {};
+  let kingdomSelected = null;
   kingdoms.forEach((kingdom) => {
     if (kingdom.Rolls.includes(roll)) {
       kingdomSelected = kingdom;
@@ -212,10 +208,8 @@ const setNewCharacteristic = (characteristics) => {
   let newCharacteristics = {};
   const characteristic = getRandomCharacteristic(characteristics);
   for (let [key, value] of Object.entries(characteristics)) {
-    if (key === characteristic) {
-      if (value < 20) {
-        value = value + 1;
-      }
+    if (key === characteristic && value < 20) {
+      value = value + 1;
     }
     newCharacteristics[key] = value;
   }
@@ -246,10 +240,7 @@ const getWill = () => {
 
 const getRationality = (baseRR, baseIRR) => {
   let rationality = 25 + rollD50()
-  if (rationality < baseRR || baseIRR > 0) {
-    rationality = baseRR
-  }
-  return rationality
+  return (rationality < baseRR || baseIRR > 0) ? baseRR : rationality;
 };
 
 const getIrrationality = (RR, baseIRR) => {
@@ -262,12 +253,8 @@ const getIrrationality = (RR, baseIRR) => {
 
 const getAppearance = (gender, baseAPP) => {
   let appearance = rollD6() + rollD6() + rollD6() + rollD6();
-  if (appearance < baseAPP) {
-    appearance = baseAPP
-  }
-  if (gender === 1 && appearance < 25) {
-    appearance += 2;
-  }
+  appearance = (appearance < baseAPP) ? baseAPP : appearance;
+  appearance = (gender === 1 && appearance < 25) ? appearance += 2 : appearance;
   return appearance;
 };
 
@@ -328,7 +315,104 @@ const setOtherCharacteristics = (otherCharacteristics, mainCharacteristics, gend
   return newCharacteristics
 }
 
-let chars = { STR: 5, AGI: 5, DEX: 5, VIT: 10, PER: 10, COM: 5, CUL: 5 };
+const setSkills = (mainCharacteristics, otherCharacteristics, skills) => {
+  let newSkills = {};
+  // Iterar skills si KEY = 
+  /*
+  const characteristic = getRandomCharacteristic(characteristics);
+  for (let [key, value] of Object.entries(characteristics)) {
+    if (key === characteristic && value < 20) {
+      value = value + 1;
+    }
+    newCharacteristics[key] = value;
+  }*/
+  return newCharacteristics;
+};
+
+
+let trialChar = {
+  Name: '',
+  Gender: 1,
+  Kingdom: 'Corona de Castilla',
+  People: 'Mudéjar',
+  Position: 'Campesina Colona',
+  Family: '',
+  Profession: 'Brujo',
+  ParentProfession: 'Curandero',
+  MainCharacteristics: { STR: 8, AGI: 14, DEX: 9, VIT: 19, PER: 11, COM: 11, CUL: 20 },
+  OtherCharacteristics: {
+    APP: 17,
+    RR: 32,
+    IR: 68,
+    LUCK: 42,
+    WILL: 56,
+    AGE: 26,
+    HEIGHT: 1.59,
+    WEIGHT: 120
+  },
+  AdvantagesDisadvantages: [],
+  Skills: {
+    Alchemy: 0,
+    AnimalKnowledge: 0,
+    AreaKnowledge: 0,
+    Astrology: 0,
+    Climb: 0,
+    Command: 0,
+    Commerce: 0,
+    Conceal: 0,
+    CourtEtiquette: 0,
+    Craft: 0,
+    Discovery: 0,
+    Disguise: 0,
+    Dodge: 0,
+    Drive: 0,
+    Eloquence: 0,
+    Empathy: 0,
+    Games: 0,
+    Heal: 0,
+    Jump: 0,
+    Language: 0,
+    Legends: 0,
+    Listen: 0,
+    MagicalKnowledge: 0,
+    Medicine: 0,
+    Memory: 0,
+    MineralKnowledge: 0,
+    Music: 0,
+    PickLock: 0,
+    PlantKnowledge: 0,
+    ReadWrite: 0,
+    Ride: 0,
+    Run: 0,
+    Seduction: 0,
+    ShipHandling: 0,
+    Singing: 0,
+    SleightHand: 0,
+    Stealth: 0,
+    Swim: 0,
+    Taste: 0,
+    Teach: 0,
+    Theology: 0,
+    Throw: 0,
+    Torture: 0,
+    Track: 0,
+    Axes: 0,
+    Bows: 0,
+    Brawl: 0,
+    Clubs: 0,
+    Crossbows: 0,
+    Knives: 0,
+    Longwords: 0,
+    Maces: 0,
+    Shields: 0,
+    Slings: 0,
+    Spears: 0,
+    Swords: 0
+  },
+  Purse: { Income: 0, Expenses: 0 }
+}
+
+console.log(trialChar.Skills)
 
 
 
