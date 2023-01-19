@@ -138,20 +138,6 @@ Ingresos Mensuales: Los trovadores de la Baja Nobleza reciben 500 maravedíes me
 Ingresos Mensuales: Un ulema recibe al mes un sueldo equivalente a 1.800 maravedíes.
 
 
-### Competencia Armas:
-Arcos: Villano, Soldado
-Ballesta: Soldado, Noble
-Cuchillos: Villano, Soldado, Noble
-Escudos: Soldado, Noble
-Espadas: Noble
-Espadones: Noble
-Hachas: Villano, Soldado
-Hondas: Villano
-Lanzas: Soldado, Noble
-Mazas: Villano, Soldado
-Palos: Villano
-Pelea: Villano, Soldado, Noble
-
 ### Profesión paterna:
 Para averiguar cuál es la profesión que tenían los padres del personaje, haz una tirada de 1D100 en la Tabla de Profesiones, en el apartado que corresponda a la posición social del personaje y a su sociedad (cristiana, islámica o judía).
 El personaje aprende las cuatro competencias primarias de dicha profesión
