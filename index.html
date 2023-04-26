@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+   <script type="module" src="./src/main.js" defer></script>
+    <title>Aquelarre</title>
+</head>
+<body>
+    <header class="off">
+        <a href="https://www.nosolorol.com/es/aquelarre/39/aquelarre" target="_blank" rel="noopener noreferrer">Aquelarre</a>
+    </header>
+    <section class="main-page">
+        <section class="main-page__intro">
+            <h1 class="main-page__title">Aquelarre</h1>
+            <p>
+                Aquelarre es un juego de rol creado por Ricard Ibáñez. Está ambientado en la península ibérica durante la Edad Media, más exactamente entre los siglos XIII y XIV. Si bien tiene un ambiente marcadamente histórico también tiene un profundo trasfondo fantástico: todos los mitos y leyendas de aquella época son reales, que el diablo anda entre los mortales y que se libra una eterna batalla entre dos realidades, lo racional y lo irracional.
+            </p>
+            <div class="main-page__create">
+                <button class="main-page__create--button">CREAR PERSONAJE</button>
+            </div>
+            <p>
+                La creación de personajes en Aquelarre puede ser libre: eligiendo cada rasgo del personaje siguiendo ciertas limitaciones. Pero también existe clásica, con casi todo determinado a base de tiradas de dados. Siguiendo las normas de este último modo, y añadiendo algunas para que aquello que se podía elegir sea también asignado al azar, este generador de personajes crea uno totalmente aleatorio.
+            </p>
+        </section>
+        <section class="main-page__updates">
+        <h2 class="main-page__subtitle">FUTURAS MEJORAS:</h2>
+        <h3 class="updates__subtitle">Generación del personaje:</h3>
+        <ul class="updates__list">
+            <li class="updates__list--item">Añadir competencias.</li> 
+            <li class="updates__list--item">Añadir selección aleatoria de orgullos y vergüenzas.</li> 
+            <li class="updates__list--item">Añadir bolsa (ingresos/gastos)</li>
+            <li class="updates__list--item">Añadir equipo, posesiones y armas.</li>  
+            <li class="updates__list--item">Añadir situación familiar.</li> 
+            <li class="updates__list--item">Añadir hechizos y rituales.</li>   
+        </ul>
+        <h3 class="updates__subtitle">Opciones extra:</h3>
+        <ul class="updates__list">
+            <li class="updates__list--item">Guardar personajes favoritos en el local storage.</li> 
+            <li class="updates__list--item">Descargar/Guardar pdf de la hoja del personaje.</li>
+            <li class="updates__list--item">Permitir ver más información sobre cada característica.</li>  
+            <li class="updates__list--item">Permitir la edición de algunas de las características.</li>
+            <li class="updates__list--item">Versión en inglés.</li>        
+        </ul>
+        </section>
+    </section>
+    <section class="character-page off">
+        <div class="character-page__header">
+            <button class="header__new-character">
+                <svg class="header__new-character--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path/></svg>
+            </button>
+            <h1 class="header__name"></h1>
+        </div>
+        <section class="character-page__character">
+        </section>
+    </section>
+    <footer>
+        made by<a href="https://github.com/rucev" target="_blank" rel="noopener noreferrer">@rucev</a>
+        <a href="https://github.com/rucev/AquelarreCharacterGenerator" target="_blank" rel="noopener noreferrer">
+            <svg class="footer__github--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path/></svg>
+        </a>
+    </footer>
+</body>
+</html>

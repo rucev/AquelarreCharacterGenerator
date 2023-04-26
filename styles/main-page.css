@@ -1,0 +1,57 @@
+.main-page {
+    text-align: justify;
+    gap: 0.25rem;
+}
+
+.main-page__title {
+    font-size: 2.75em;
+    font-family: 'Bilbo Swash Caps', cursive;
+    color: var(--color-subtitle);
+    margin: 0;
+    padding: 1rem 0.75rem 0;
+}
+
+.main-page__intro p {
+    font-size: 1.15em;
+}
+
+.main-page__subtitle {
+    font-size: 1.25em;
+    color: var(--color-title);
+    font-family: 'MedievalSharp', cursive;
+    margin: 0;
+    padding: 0.25rem 0.75rem 0;
+}
+
+.updates__subtitle {
+    margin: 0;
+    color: var(--color-subtitle);
+    font-size: 1.05em;
+    padding: 0.55rem 0.75rem 0;
+}
+
+.updates__list {
+    margin: 0;
+    padding: 0.55rem 2.75rem 0;
+}
+
+.updates__list--item {
+    margin: 0;
+    padding-bottom: 0.25rem;
+}
+
+@media (min-width: 720px){
+    .main-page {
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+
+    .main-page__intro, .main-page__updates {
+        width: 45%;
+    }
+
+    .main-page__updates {
+        padding-top: 4.75rem;
+    }
+
+}

@@ -3,21 +3,16 @@ import {
   rollD10,
   rollD100,
   sumValues,
-  rollD6,
-  rollD8,
-  rollD50,
-} from "./dices&tools.js";
-import { kingdoms } from "../rules/rules-kingdom.js";
-import { socialPositions } from "../rules/rules-position.js";
-import { professions } from "../rules/rules-profession.js";
+} from './dices&tools.js';
+import { kingdoms } from '../rules/rules-kingdom.js';
+import { socialPositions } from '../rules/rules-position.js';
+import { professions } from '../rules/rules-profession.js';
 import {
   professionCharacteristics,
-  professionSkills,
-  professionsSubcategory,
-} from "../rules/details-professions.js";
-import {checkProfession} from "./specific-tools/get-profesion-tools.js"
+} from '../rules/details-professions.js';
+import {checkProfession} from './specific-tools/get-profesion-tools.js'
 import {
-  setNewCharacteristic,
+  setNewCharacteristics,
   getLuck,
   getWill,
   getRationality,
@@ -26,7 +21,8 @@ import {
   getAge,
   getHeight,
   getWeight
-} from "./specific-tools/set-characteristics-tools.js";
+} from './specific-tools/set-characteristics-tools.js';
+import { names } from '../rules/name-rules.js';
 
 const getGender = () => {
   const roll = rollD4();
@@ -79,12 +75,12 @@ const getSocialPosition = (people) => {
 const getSubclassPositionName = (socialPosition, gender) => {
   const roll = rollD10();
   let subclassSelected = {};
-  let subclassName = "";
+  let subclassName = '';
   if (socialPosition.Subclass != undefined) {
     socialPosition.Subclass.forEach((position) => {
       if (position.Rolls.includes(roll)) {
         subclassSelected = position;
-        subclassName = " " + subclassSelected.Name[gender];
+        subclassName = ' ' + subclassSelected.Name[gender];
       }
     });
   }
@@ -142,10 +138,11 @@ const setCharacteristicsByProfession = (professionName, characteristics) => {
 };
 
 const setMainCharacteristics = (characteristics) => {
-  let newCharacteristics = characteristics;
+  let newCharacteristics = { ...characteristics };
   let availableCharacteristicsPoints = 100 - sumValues(characteristics);
+  console.log('AVPOINTS', availableCharacteristicsPoints)
   do {
-    newCharacteristics = setNewCharacteristic(newCharacteristics);
+    newCharacteristics = setNewCharacteristics(newCharacteristics);
     availableCharacteristicsPoints -= 1;
   } while (availableCharacteristicsPoints > 0);
   return newCharacteristics;
@@ -164,6 +161,15 @@ const setOtherCharacteristics = (otherCharacteristics, mainCharacteristics, gend
   return newCharacteristics
 }
 
+const getName = (gender, people) => {
+  let availableNames;
+for (const nameList of names) {
+  if((nameList.people).includes(people)) availableNames = nameList.names[gender];
+}
+  const randomIndex = Math.floor(Math.random() * availableNames.length);
+  return availableNames[randomIndex];
+}
+
 // TODO: Add AdvantagesDisadvantages
 
 
@@ -176,5 +182,6 @@ export {
   getProfession,
   setCharacteristicsByProfession,
   setMainCharacteristics,
-  setOtherCharacteristics
+  setOtherCharacteristics,
+  getName
 };

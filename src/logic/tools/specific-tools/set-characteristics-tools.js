@@ -2,8 +2,8 @@ import {
     rollD10,
     rollD6,
     rollD50,
-  } from "../dices&tools.js";
-import { rulesHeight, rulesWeight } from "../../rules/rules-characteristics.js";
+  } from '../dices&tools.js';
+import { rulesHeight, rulesWeight } from '../../rules/rules-characteristics.js';
 
 const getRandomCharacteristic = (characteristics) => {
   const keys = Object.keys(characteristics);
@@ -12,14 +12,13 @@ const getRandomCharacteristic = (characteristics) => {
   return characteristic;
 };
 
-const setNewCharacteristic = (characteristics) => {
-  let newCharacteristics = {};
+const setNewCharacteristics = (characteristics) => {
+  let newCharacteristics = { ...characteristics }; 
   const characteristic = getRandomCharacteristic(characteristics);
   for (let [key, value] of Object.entries(characteristics)) {
     if (key === characteristic && value < 20) {
-      value = value + 1;
+      newCharacteristics[key] = value + 1;
     }
-    newCharacteristics[key] = value;
   }
   return newCharacteristics;
 };
@@ -101,7 +100,7 @@ const getWeight = (characteristics, gender) => {
 };
 
 export {
-    setNewCharacteristic,
+    setNewCharacteristics,
     getLuck,
     getWill,
     getRationality,

@@ -1,0 +1,85 @@
+.character-page__header {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.header__new-character--icon {
+    fill: var(--color-title);
+    height: 2.5rem;
+    width: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.header__name {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 2.75em;
+    color: var(--color-title);
+    margin: 0;
+    padding: 1rem 0 0;
+}
+
+.header__name--initial {
+    font-size: 1.75em;
+}
+
+.character-page__character {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.character__container{
+    max-width: 90%;
+    padding: 0.05rem 0.75rem 0.15rem;
+}
+
+.character__container__title {
+    margin: 0;
+    font-family: 'Tapestry', cursive;
+    font-size: 1.5em;
+    color: var(--color-subtitle);
+    border-bottom: var(--color-borders-dark) 0.1rem solid;
+}
+
+.character__container__title--initial {
+    font-size: 2.15em;
+}
+
+.character__container__item {
+    border-bottom: var(--color-borders-light) 0.05rem solid;
+    font-size: 1.25em;
+}
+
+.character__container__item--name {
+    font-family: 'MedievalSharp', cursive;
+    padding: 0.05rem 1rem 0.05rem 0;
+    font-size: 1.05em;
+}
+
+.character__container__item--value {
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-left: 1.25rem;
+}
+
+@media (min-width: 450px){
+    .character-page__character {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .character__container{
+        padding: 0.15rem 1.25rem;
+        min-width: fit-content;
+        max-width: 100%;
+    }
+
+    .header__new-character--icon:hover{
+        fill: var(--color-subtitle);
+        cursor: pointer;
+    }
+}

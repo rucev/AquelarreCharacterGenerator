@@ -1,16 +1,17 @@
-import { emptyCharacter } from "./empty-character.js";
-import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics } from "./tools/create-character-tools.js"
+import { emptyCharacter } from './tools/empty-character.js';
+import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics, getName } from './tools/create-character-tools.js'
 
 //TODO: Add Skills
 
-const createCharacter = () => {
-    let character = emptyCharacter
+export const createCharacter = () => {
+    const character = {...emptyCharacter};
     const gender = getGender()
     character.Gender = gender
     const kingdom = getKingdom()
     character.Kingdom = kingdom.Name
     const people = getPeople(kingdom)
     character.People = people.Name
+    character.Name = getName(gender, people.Name)
     const socialPosition = getSocialPosition(people)
     const subclassPosition = getSubclassPositionName(socialPosition, gender)
     character.Position = socialPosition.Name + subclassPosition
@@ -22,7 +23,5 @@ const createCharacter = () => {
     character.OtherCharacteristics = setOtherCharacteristics(setCharacteristicsByProfession(profession.Name, character.OtherCharacteristics), character.MainCharacteristics, gender)
     return character
 }
-
-
 
 console.log(createCharacter())

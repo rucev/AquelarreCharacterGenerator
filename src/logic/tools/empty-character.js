@@ -1,12 +1,12 @@
-let emptyCharacter = {
-  Name: "",
+export const emptyCharacter = {
+  Name: '',
   Gender: 0,
-  Kingdom: "",
-  People: "",
-  Position: "",
-  Family: "",
-  Profession: "",
-  ParentProfession: "",
+  Kingdom: '',
+  People: '',
+  Position: '',
+  Family: '',
+  Profession: '',
+  ParentProfession: '',
   MainCharacteristics: {
     STR: 5,
     AGI: 5,
@@ -36,5 +36,3 @@ let emptyCharacter = {
 
 
 // TODO: Add Missing Character Features
-
-export { emptyCharacter };

@@ -1,4 +1,4 @@
-import { professionsExclusivityCriteria } from "../../rules/details-professions.js";
+import { professionsExclusivityCriteria } from '../../rules/details-professions.js';
 
 // TODO: Add Salary Functions
 

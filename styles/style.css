@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=David+Libre:wght@500&family=MedievalSharp&family=Tapestry&display=swap');
+
+@import './character-page.css';
+@import './main-page.css';
+@import './button.css';
+
+:root {
+    --color-link: #1b1717;
+    --color-title: #8f2c2a;
+    --color-subtitle: #65201f;
+    --color-text: #350c0c;
+    --color-borders-dark: #1f0303;
+    --color-borders-light: #2b1616c3;
+    --color-borders-transparence: #3f191990;
+    --color-light-transparence: #643d0224;
+    --color-dark-transparence: #05050592;
+}
+
+html {
+	font-size: 12px;
+}
+
+body {
+    background-image: url('../assets/background.webp');
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'David Libre', serif;
+    color: var(--color-text);
+    -webkit-tap-highlight-color: var(--color-borders-transparence);
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+header {
+    height: 2.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.05rem 0.75rem 0;
+    background-color: var(--color-borders-transparence);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    height: 1.75rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: var(--color-borders-dark);
+
+}
+
+a {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 600;
+    color: var(--color-link);
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+footer svg {
+    padding-right: 0.5rem;
+    fill: var(--color-borders-dark);
+    height: 1.05em;
+    width: 1.05em;
+}
+
+.main-page, .character-page {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.off {
+    display: none;
+}
+
+@media (min-width: 450px){
+    html {
+        font-size: 10px;
+    }
+
+}

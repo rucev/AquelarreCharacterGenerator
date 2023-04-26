@@ -1,0 +1,50 @@
+.main-page__create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-page__create--button {
+  align-self: center;
+  background-color: var(--color-light-transparence);
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 0.25rem 0.2rem;
+  border-color: var(--color-borders-light);
+  border-radius: 1rem 10.5rem 10.5rem 1rem 1rem 10.5rem 10.5rem 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  box-shadow: var(--color-dark-transparence) 1rem 2rem 2rem -1.5rem;
+  box-sizing: border-box;
+  color: var(--color-title);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.75rem;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 1rem 10.5rem;
+  border-bottom-right-radius: 10.5rem 1rem ;
+  border-top-left-radius: 10.5rem 1rem ;
+  border-top-right-radius: 1rem  10.5rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media (min-width: 450px) {
+    .main-page__create--button:hover {
+        box-shadow: var(--color-dark-transparence) 0.1rem 0.5rem 0.5rem -5px;
+        transform: translate3d(0, 0.1rem, 0);
+      }
+      
+      .main-page__create--button:focus {
+        box-shadow: var(--color-dark-transparence) 0.1rem 0.5rem 0.25rem -0.35rem;
+      }
+
+}

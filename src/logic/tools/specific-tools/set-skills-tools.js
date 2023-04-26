@@ -1,5 +1,5 @@
-import {skillByCharacteristic} from "../../rules/rules-characteristics.js"
-import { professionSkills } from "../../rules/details-professions.js"
+import {skillByCharacteristic} from '../../rules/rules-characteristics.js'
+import { professionSkills } from '../../rules/details-professions.js'
 
 const testChar = {
     Name: '',
@@ -37,7 +37,7 @@ const setCharacteristicsBySkills = (mainCharacteristics, APP) => {
         skills.forEach((skill) => {
             let newSkill = {};
             newSkill[skill.ID] = mainCharacteristics[char]
-            if(char == "APP"){ // Apperance is the only not Main Characteristic that affects Skills
+            if(char == 'APP'){ // Apperance is the only not Main Characteristic that affects Skills
                 newSkill[skill.ID] = APP
             }
             characterSkills.push(newSkill)
@@ -60,10 +60,10 @@ const getProfessionSkills = (professionName, skillsRank) => {
 // TODO: Check why an undefined appears while checkSkillType
 
 const checkSkillType = (skill, characterProfession, parentProfession) => { // 3 = Primary, 2 = Secondary, 1 = Paternal, 0 = Normal
-    const primarySkills = getProfessionSkills(characterProfession, "PrimarySkills");
+    const primarySkills = getProfessionSkills(characterProfession, 'PrimarySkills');
     console.log(primarySkills)
-    const secondarySkills = getProfessionSkills(characterProfession, "SecondarySkills");
-    const paternSkills = getProfessionSkills(parentProfession, "PrimarySkills");
+    const secondarySkills = getProfessionSkills(characterProfession, 'SecondarySkills');
+    const paternSkills = getProfessionSkills(parentProfession, 'PrimarySkills');
     let skillType = Number
     if (primarySkills.includes(skill)) {
         skillType = 3
@@ -78,6 +78,6 @@ const checkSkillType = (skill, characterProfession, parentProfession) => { // 3 
 }
 
 
-console.log(checkSkillType("Seduction", testChar.Profession, testChar.ParentProfession))
+console.log(checkSkillType('Seduction', testChar.Profession, testChar.ParentProfession))
 
 console.log(getProfessionSkills(testChar.Profession))
