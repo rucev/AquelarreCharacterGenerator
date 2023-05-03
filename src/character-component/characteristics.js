@@ -5,6 +5,7 @@ export default function initCharacteristics(character) {
         const main = character.MainCharacteristics;
         let html = `<h3 class="character__container__title">
                     <b class="character__container__title--initial">C</b>aracterísticas  <b class="character__container__title--initial">B</b>ase</h3>
+                    <div class="character__container__items">
                     <p class="character__container__item">
                         <b class="character__container__item--name">FUErza</b><br>
                         <span class="character__container__item--value">${main.STR}</span>
@@ -32,7 +33,8 @@ export default function initCharacteristics(character) {
                     <p class="character__container__item">
                         <b class="character__container__item--name">CULtura</b><br>
                         <span class="character__container__item--value">${main.CUL}</span>
-                    </p>`
+                    </p>
+                    </div>`
         characteristicsArticle.innerHTML = html;
         const characterContainer = document.querySelector('.character-page__character');
         characterContainer.appendChild(characteristicsArticle);
@@ -44,6 +46,7 @@ export default function initCharacteristics(character) {
         const other = character.OtherCharacteristics;
         let html = `<h3 class="character__container__title">
                     <b class="character__container__title--initial">C</b>aracterísticas  <b class="character__container__title--initial">P</b>ersonales</h3>
+                    <div class="character__container__items">
                     <p class="character__container__item">
                         <b class="character__container__item--name">Edad</b><br>
                         <span class="character__container__item--value">${other.AGE} años</span>
@@ -62,20 +65,21 @@ export default function initCharacteristics(character) {
                     </p>
                     <p class="character__container__item">
                         <b class="character__container__item--name">Templanza</b><br>
-                        <span class="character__container__item--value">${other.WILL}</span>
+                        <span class="character__container__item--value">${other.WILL}%</span>
                     </p>
                     <p class="character__container__item">
                         <b class="character__container__item--name">RRacionalidad</b><br>
-                        <span class="character__container__item--value">${other.RR}</span>
+                        <span class="character__container__item--value">${other.RR}%</span>
                     </p>
                     <p class="character__container__item">
                         <b class="character__container__item--name">Suerte</b><br>
-                        <span class="character__container__item--value">${other.LUCK}</span>
+                        <span class="character__container__item--value">${other.LUCK}%</span>
                     </p>
                     <p class="character__container__item">
                         <b class="character__container__item--name">IRRacionalidad</b><br>
-                        <span class="character__container__item--value">${other.IR}</span>
-                    </p>`
+                        <span class="character__container__item--value">${other.IR}%</span>
+                    </p>
+                    </div>`
         characteristicsArticle.innerHTML = html;
         const characterContainer = document.querySelector('.character-page__character');
         characterContainer.appendChild(characteristicsArticle);

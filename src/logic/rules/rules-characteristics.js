@@ -31,81 +31,81 @@ const rulesWeight = [
 ];
 
 const skillsSTR = [ 
-  { ID: 'Axes', Name: 'Hachas' },
-  { ID: 'Longwords', Name: 'Espadones' },
-  { ID: 'Maces', Name: 'Mazas' },
+  { id: 'Axes', Name: 'Hachas' },
+  { id: 'Longwords', Name: 'Espadones' },
+  { id: 'Maces', Name: 'Mazas' },
 ];
 
 const skillsAGI = [
-  { ID: 'Climb', Name: 'Trepar' },
-  { ID: 'Dodge', Name: 'Esquivar' },
-  { ID: 'Jump', Name: 'Saltar' },
-  { ID: 'Ride', Name: 'Cabalgar' },
-  { ID: 'Run', Name: 'Correr' },
-  { ID: 'Throw', Name: 'Lanzar' },
-  { ID: 'Swim', Name: 'Nadar' },
-  { ID: 'Stealth', Name: 'Sigilo' },
-  { ID: 'Spears', Name: 'Lanzas' },
-  { ID: 'Brawl', Name: 'Pelea' },
-  { ID: 'Clubs', Name: 'Palos' },
+  { id: 'Climb', Name: 'Trepar' },
+  { id: 'Dodge', Name: 'Esquivar' },
+  { id: 'Jump', Name: 'Saltar' },
+  { id: 'Ride', Name: 'Cabalgar' },
+  { id: 'Run', Name: 'Correr' },
+  { id: 'Throw', Name: 'Lanzar' },
+  { id: 'Swim', Name: 'Nadar' },
+  { id: 'Stealth', Name: 'Sigilo' },
+  { id: 'Spears', Name: 'Lanzas' },
+  { id: 'Brawl', Name: 'Pelea' },
+  { id: 'Clubs', Name: 'Palos' },
 ];
 
 const skillsDEX = [
-  { ID: 'Conceal', Name: 'Escamotear' },
-  { ID: 'ShipHandling', Name: 'Navegar' },
-  { ID: 'Craft', Name: 'Artesanía' },
-  { ID: 'Drive', Name: 'Conducir Carro' },
-  { ID: 'Heal', Name: 'Sanar' },
-  { ID: 'PickLock', Name: 'Forzar Mecanismos' },
-  { ID: 'SleightHand', Name: 'Juego' },
-  { ID: 'Knives', Name: 'Cuchillos' },
-  { ID: 'Swords', Name: 'Espadas' },
+  { id: 'Conceal', Name: 'Escamotear' },
+  { id: 'ShipHandling', Name: 'Navegar' },
+  { id: 'Craft', Name: 'Artesanía' },
+  { id: 'Drive', Name: 'Conducir Carro' },
+  { id: 'Heal', Name: 'Sanar' },
+  { id: 'PickLock', Name: 'Forzar Mecanismos' },
+  { id: 'SleightHand', Name: 'Juego' },
+  { id: 'Knives', Name: 'Cuchillos' },
+  { id: 'Swords', Name: 'Espadas' },
 ];
 
 const skillsPER = [
-  { ID: 'Discovery', Name: 'Descubrir' },
-  { ID: 'Empathy', Name: 'Empatía' },
-  { ID: 'Listen', Name: 'Escuchar' },
-  { ID: 'Memory', Name: 'Memoria' },
-  { ID: 'Taste', Name: 'Degustar' },
-  { ID: 'Track', Name: 'Rastrear' },
-  { ID: 'Bows', Name: 'Arcos' },
-  { ID: 'Crossbows', Name: 'Ballestas' },
-  { ID: 'Slings', Name: 'Hondas' },
+  { id: 'Discovery', Name: 'Descubrir' },
+  { id: 'Empathy', Name: 'Empatía' },
+  { id: 'Listen', Name: 'Escuchar' },
+  { id: 'Memory', Name: 'Memoria' },
+  { id: 'Taste', Name: 'Degustar' },
+  { id: 'Track', Name: 'Rastrear' },
+  { id: 'Bows', Name: 'Arcos' },
+  { id: 'Crossbows', Name: 'Ballestas' },
+  { id: 'Slings', Name: 'Hondas' },
 ];
 
 const skillsCOM = [
-  { ID: 'Command', Name: 'Mando' },
-  { ID: 'Commerce', Name: 'Comerciar' },
-  { ID: 'CourtEtiquette', Name: 'Corte' },
-  { ID: 'Disguise', Name: 'Disfrazarse'},
-  { ID: 'Eloquence', Name: 'Elocuencia' },
-  { ID: 'Singing', Name: 'Canto' },
-  { ID: 'Teach', Name: 'Enseñar' },
-  { ID: 'Torture', Name: 'Tormento' },
+  { id: 'Command', Name: 'Mando' },
+  { id: 'Commerce', Name: 'Comerciar' },
+  { id: 'CourtEtiquette', Name: 'Corte' },
+  { id: 'Disguise', Name: 'Disfrazarse'},
+  { id: 'Eloquence', Name: 'Elocuencia' },
+  { id: 'Singing', Name: 'Canto' },
+  { id: 'Teach', Name: 'Enseñar' },
+  { id: 'Torture', Name: 'Tormento' },
 ];
 
 const skillsVIT = [
-  { ID: 'Shields', Name: 'Escudos'}
+  { id: 'Shields', Name: 'Escudos'}
 ]
 
 const skillsCUL = [
-  { ID: 'Alchemy', Name: 'Alquimia' },
-  { ID: 'AnimalKnowledge', Name: 'Conocimiento Animal' },
-  { ID: 'AreaKnowledge', Name: 'Conocimiento de Área' },
-  { ID: 'Astrology', Name: 'Astrología' },
-  //{ ID: 'Language', Name: 'Idioma' },
-  { ID: 'Legends', Name: 'Leyendas' },
-  { ID: 'MagicalKnowledge', Name: 'Conocimiento Mágico' },
-  { ID: 'Medicine', Name: 'Medicina' },
-  { ID: 'MineralKnowledge', Name: 'Conocimiento Mineral' },
-  { ID: 'Music', Name: 'Música' },
-  { ID: 'PlantKnowledge', Name: 'Conocimiento Vegetal' },
-  { ID: 'ReadWrite', Name: 'Leer y Escribir' },
-  { ID: 'Theology', Name: 'Teología' },
+  { id: 'Alchemy', Name: 'Alquimia' },
+  { id: 'AnimalKnowledge', Name: 'Conocimiento Animal' },
+  { id: 'AreaKnowledge', Name: 'Conocimiento de Área' },
+  { id: 'Astrology', Name: 'Astrología' },
+  //{ id: 'Language', Name: 'Idioma' },
+  { id: 'Legends', Name: 'Leyendas' },
+  { id: 'MagicalKnowledge', Name: 'Conocimiento Mágico' },
+  { id: 'Medicine', Name: 'Medicina' },
+  { id: 'MineralKnowledge', Name: 'Conocimiento Mineral' },
+  { id: 'Music', Name: 'Música' },
+  { id: 'PlantKnowledge', Name: 'Conocimiento Vegetal' },
+  { id: 'ReadWrite', Name: 'Leer y Escribir' },
+  { id: 'Theology', Name: 'Teología' },
 ];
 
-const skillsAPP = [{ ID: 'Seduction', Name: 'Seducción' }];
+const skillsAPP = [{ id: 'Seduction', Name: 'Seducción' }];
 
 const skillByCharacteristic = {STR: skillsSTR, AGI: skillsAGI, DEX: skillsDEX, PER: skillsPER, COM: skillsCOM, VIT: skillsVIT, CUL: skillsCUL, APP: skillsAPP }
 

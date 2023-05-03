@@ -23,6 +23,7 @@ import {
   getWeight
 } from './specific-tools/set-characteristics-tools.js';
 import { names } from '../rules/name-rules.js';
+import { getSkillsByType, setCharacteristicsBySkills } from './specific-tools/set-skills-tools.js';
 
 const getGender = () => {
   const roll = rollD4();
@@ -140,7 +141,6 @@ const setCharacteristicsByProfession = (professionName, characteristics) => {
 const setMainCharacteristics = (characteristics) => {
   let newCharacteristics = { ...characteristics };
   let availableCharacteristicsPoints = 100 - sumValues(characteristics);
-  console.log('AVPOINTS', availableCharacteristicsPoints)
   do {
     newCharacteristics = setNewCharacteristics(newCharacteristics);
     availableCharacteristicsPoints -= 1;
@@ -170,6 +170,15 @@ for (const nameList of names) {
   return availableNames[randomIndex];
 }
 
+const getSkills = (character) => {
+  const mainCharacteristics = character.MainCharacteristics;
+  const APP = character.OtherCharacteristics.APP;
+  const skills = setCharacteristicsBySkills(mainCharacteristics, APP)
+  const profesion = character.Profession;
+  const parentProfession = character.ParentProfession;
+  return getSkillsByType(skills, profesion, parentProfession)
+}
+
 // TODO: Add AdvantagesDisadvantages
 
 
@@ -183,5 +192,6 @@ export {
   setCharacteristicsByProfession,
   setMainCharacteristics,
   setOtherCharacteristics,
-  getName
+  getName,
+  getSkills,
 };

@@ -2,6 +2,7 @@
 import initCharacteristics from './character-component/characteristics.js';
 import initName from './character-component/name.js';
 import initOrigin from './character-component/origin.js';
+import initSkills from './character-component/skills.js';
 import { createCharacter } from './logic/create-character.js';
 import { cleanCharacterPage, setSvgDisplay, toggleOff } from './ui.js';
 
@@ -21,6 +22,7 @@ generateCharacter.addEventListener('click', (event) => {
   initOrigin(character)
   initCharacteristics(character)
   initName(character)
+  initSkills(character)
 });
 
 generateNewCharacter.addEventListener('click', (event) => {
@@ -30,4 +32,5 @@ generateNewCharacter.addEventListener('click', (event) => {
   initOrigin(newCharacter);
   initCharacteristics(newCharacter);
   initName(newCharacter)
+  initSkills(newCharacter)
 });

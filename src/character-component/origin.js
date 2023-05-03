@@ -4,6 +4,7 @@ export default function initOrigin(character) {
 
     let html = `<h3 class="character__container__title">
                 <b class="character__container__title--initial">O</b>rigen</h3>
+                <div class="character__container__items">
                 <p class="character__container__item">
                     <b class="character__container__item--name">Reino</b><br>
                     <span class="character__container__item--value">${character.Kingdom}</span>
@@ -23,7 +24,8 @@ export default function initOrigin(character) {
                 <p class="character__container__item">
                     <b class="character__container__item--name">Profesión paterna</b><br>
                     <span class="character__container__item--value">${character.ParentProfession}</span>
-                </p>`
+                </p>
+                </div>`
 
     originArticle.innerHTML = html;
     const characterContainer = document.querySelector('.character-page__character');
