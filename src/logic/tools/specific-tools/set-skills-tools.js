@@ -1,5 +1,5 @@
-import {skillByCharacteristic} from '../../rules/rules-characteristics.js'
-import { professionSkills } from '../../rules/details-professions.js'
+import { skillByCharacteristic } from "../../rules/rules-characteristics.js"
+import { professionSkills } from "../../rules/details-professions.js"
 
 const testChar = {
     Name: '',
@@ -12,33 +12,33 @@ const testChar = {
     ParentProfession: 'Cortesano',
     MainCharacteristics: { STR: 6, AGI: 20, DEX: 9, VIT: 15, PER: 12, COM: 10, CUL: 20 },
     OtherCharacteristics: {
-      APP: 18,
-      RR: 69,
-      IR: 31,
-      LUCK: 42,
-      WILL: 57,
-      AGE: 19,
-      HEIGHT: 1.77,
-      WEIGHT: 146
+        APP: 18,
+        RR: 69,
+        IR: 31,
+        LUCK: 42,
+        WILL: 57,
+        AGE: 19,
+        HEIGHT: 1.77,
+        WEIGHT: 146
     },
     AdvantagesDisadvantages: [],
     Skills: [{}],
     Purse: { Income: 0, Expenses: 0 }
 }
 
-
-
 //TODO: Add Lenguages
 // TODO: Add Weapons
 
-const setCharacteristicsBySkills = (mainCharacteristics, APP) => {
+export const setCharacteristicsBySkills = (mainCharacteristics, APP) => {
     let characterSkills = []
     for (let [char, skills] of Object.entries(skillByCharacteristic)) {
         skills.forEach((skill) => {
             let newSkill = {};
-            newSkill[skill.ID] = mainCharacteristics[char]
-            if(char == 'APP'){ // Apperance is the only not Main Characteristic that affects Skills
-                newSkill[skill.ID] = APP
+            newSkill[skill.id] = mainCharacteristics[char];
+            newSkill.ESP = skill.Name;
+            if (char == "APP") { // Apperance is the only not Main Characteristic that affects Skills
+                newSkill[skill.id] = APP;
+                newSkill.ESP = skill.Name;
             }
             characterSkills.push(newSkill)
         });
@@ -46,38 +46,32 @@ const setCharacteristicsBySkills = (mainCharacteristics, APP) => {
     return characterSkills
 }
 
-const getProfessionSkills = (professionName, skillsRank) => {  
+export const getProfessionSkills = (professionName, skillsRank) => {
     let selectedProfessionSkills = []
     professionSkills.forEach((profession) => {
-        if (profession.Name === professionName){
+        if (profession.Name === professionName) {
             selectedProfessionSkills = profession[skillsRank]
-            console.log(profession[skillsRank])
-        } 
-    return selectedProfessionSkills
+        }
     });
+    return selectedProfessionSkills
 };
 
-// TODO: Check why an undefined appears while checkSkillType
+export const getSkillsByType = (skills, characterProfession, parentProfession) => {
+    const temporaryPrimarySkills = getProfessionSkills(characterProfession, 'PrimarySkills');
+    const temporarySecondarySkills = getProfessionSkills(characterProfession, 'SecondarySkills');
+    const temporaryPaternSkills = getProfessionSkills(parentProfession, 'PrimarySkills');
+    const primarySkills = [];
+    const secondarySkills = [];
+    const paternSkills = [];
+    const normalSkills = [];
 
-const checkSkillType = (skill, characterProfession, parentProfession) => { // 3 = Primary, 2 = Secondary, 1 = Paternal, 0 = Normal
-    const primarySkills = getProfessionSkills(characterProfession, 'PrimarySkills');
-    console.log(primarySkills)
-    const secondarySkills = getProfessionSkills(characterProfession, 'SecondarySkills');
-    const paternSkills = getProfessionSkills(parentProfession, 'PrimarySkills');
-    let skillType = Number
-    if (primarySkills.includes(skill)) {
-        skillType = 3
-    } else if (secondarySkills.includes(skill)) {
-        skillType = 2
-    } else if (paternSkills.includes(skill)) {
-        skillType = 1
-    } else {
-        skillType = 0
+    for (let skill of skills) {
+        const key = Object.keys(skill)[0]
+        if (temporaryPrimarySkills.includes(key)) primarySkills.push(skill);
+        else if (temporarySecondarySkills.includes(key)) secondarySkills.push(skill);
+        else if (temporaryPaternSkills.includes(key)) paternSkills.push(skill);
+        else normalSkills.push(skill)
     }
-    return skillType
+
+    return { primarySkills, secondarySkills, paternSkills, normalSkills }
 }
-
-
-console.log(checkSkillType('Seduction', testChar.Profession, testChar.ParentProfession))
-
-console.log(getProfessionSkills(testChar.Profession))

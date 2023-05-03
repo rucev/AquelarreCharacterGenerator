@@ -1,5 +1,5 @@
 import { emptyCharacter } from './tools/empty-character.js';
-import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics, getName } from './tools/create-character-tools.js'
+import { getGender, getKingdom, getPeople, getSocialPosition, getSubclassPositionName, getProfession, setCharacteristicsByProfession, setMainCharacteristics, setOtherCharacteristics, getName, getSkills } from './tools/create-character-tools.js'
 
 //TODO: Add Skills
 
@@ -21,7 +21,15 @@ export const createCharacter = () => {
     character.ParentProfession = parentProfession.Name
     character.MainCharacteristics = setMainCharacteristics(setCharacteristicsByProfession(profession.Name, character.MainCharacteristics))
     character.OtherCharacteristics = setOtherCharacteristics(setCharacteristicsByProfession(profession.Name, character.OtherCharacteristics), character.MainCharacteristics, gender)
+    character.Skills = getSkills(character)
     return character
 }
 
-console.log(createCharacter())
+const skill = createCharacter().Skills.primarySkills[0];
+
+const getValue = (skill) => {
+    for (const value of Object.values(skill)) if (typeof value === 'number') value;
+}
+
+console.log(getValue(skill))
+
